@@ -6,36 +6,41 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Art Gallery Web-site</title>
 		<link rel="stylesheet"  type="text/css" href="style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script>
+
+			$(document).ready(function() {
+				$("#artist").change(function(){
+					//This should change artwork selects to artist's artwork
+					var artistVal = $("#artist").val();
+					alert(artistVal);
+				});
+			});
+		</script>
+		
 	</head>
 </head>
 <body>
 	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-4">
-				<label>Artwork</label>
-				<select class="form-control" id="artwork">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="col-md-4">
-				<label>Artist</label>
-				<select class="form-control" id="artist">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
+		<div class="row justify-content-center" style="margin-top: 10pt;">
+			<select class="form-control" id="artist" style="width: 30%">
+				<option value="0" selected disabled>Artists</option>
+				<option value="1">Vincent can Gogh</option>
+				<option value="2">Pablo Picasso</option>
+				<option value="3">Claude Money</option>
+				<option value="4">Leonardo da Vinci</option>
+				<option value="5">Michelangelo</option>
+			</select>
+			<!-- I think this needs to change when you select different artists JS?-->
+			<select class="form-control" id="artwork" style="width: 30%; margin: 0pt 2pt 0pt 2pt">
+				<option value="0" selected disabled>Art Work</option>
+			</select>
+			<button class="btn btn-success">Submit</button>
 		</div>
-		<div class="row justify-content-center">
-			<div class="col-md-8">
-				<button class="btn btn-success btn-block">Submit</button>
-			</div>
-		</div>
+		
 		<br>
 		<br>
 		<br>
@@ -47,10 +52,7 @@
 			</div>
 		</div>
 	</div>
-
-		
-		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	
+	
 </body>
 </html>
