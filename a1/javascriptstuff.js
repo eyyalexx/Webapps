@@ -5,19 +5,26 @@ $(document).ready(function() {
 
 	//When changes made to artists dropdown menu
 	$("#artist").change(function(){
+		$(".fixed-centered").fadeOut("fast");
 		var artistVal = $("#artist").val();
 		updateList(artistVal);
 	});
 
 	//When changes made to artwork dropdown menu
 	$("#artwork").change(function(){
-		if ($("#artwork").val() > 0) {
-			//enable submit
-			$("#sbtn").removeClass("disabled");
-		} else {
-			//disable submit
-			$("#sbtn").addClass("disabled");
-		}
+		$(".fixed-centered").fadeOut("fast", function(){
+			if ($("#artwork").val() > 0) {
+				$('.box-img').remove();
+				//addes image to box 		change css of .box-img!
+				$('.fixed-centered').append('<img class="box-img" src="' + artworks[$("#artist").val()][1][parseInt($("#artwork").val()) - 1] + '">');
+				//enable submit
+				$("#sbtn").removeClass("disabled");
+			} else {
+				//disable submit
+				$("#sbtn").addClass("disabled");
+			}
+		});
+		
 	});
 
 
@@ -63,14 +70,30 @@ function updateList(av){
 var artworks = Object.freeze(
 		{
 			1:[["The Starry Night","Irises","The Potato Eaters", "Cafe Terrace at Night"],
-					[]],
+					[
+						"",
+						""
+					]],
 			2:[["Guernica","Les Demoiselles d'Avignon","The Old Guitarist","Chicago Picasso","The Weeping Woman"],
-					[]],
+					[
+						"",
+						""
+					]],
 			3:[["Bain a la Grenouillere","Bathers at La Grenouillere","Impression, Sunrise","Woman with a Parasol","The Magpie"],
-					[]],
+					[
+						"",
+						""
+					]],
 			4:[["Mona Lisa","The Last Supper","Annunciation","St. John the Baptist","Salvator Mundi"],
-					[]],
-			5:[["Sistine Chapel ceiling", "The Last Judgement", "Pieta", "David", "The Creation of Adam"],
-					[]]
+					[
+
+					]],
+			5:[["The Last Judgement", "Pieta", "David", "The Creation of Adam"],
+					[
+						"https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Last_Judgement_%28Michelangelo%29.jpg/1280px-Last_Judgement_%28Michelangelo%29.jpg",
+						"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg/1280px-Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg",
+						"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/%27David%27_by_Michelangelo_Fir_JBU002.jpg/800px-%27David%27_by_Michelangelo_Fir_JBU002.jpg",
+						"https://upload.wikimedia.org/wikipedia/commons/6/64/Creaci%C3%B3n_de_Ad%C3%A1n_%28Miguel_%C3%81ngel%29.jpg"
+					]]
 		}
 	);
