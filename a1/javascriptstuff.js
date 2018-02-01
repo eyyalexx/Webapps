@@ -25,11 +25,15 @@ $(document).ready(function() {
 	$('#sbtn').click(function(){
 		//Submit button will only grab artworkVal and artistVal if enabled
 		if ( !$('#sbtn').hasClass('disabled') ) {
-	 		alert($("#artist").val() + " " + $("#artwork").val());//debug code
+	 		//alert($("#artist").val() + " " + $("#artwork").val());//debug code
+	 		$(".fixed-centered").fadeIn("slow");
 	 	}
 	});
-	 
 
+
+	$('.close').click(function(){
+		$(".fixed-centered").fadeOut("slow");
+	});
 
 
 });
@@ -48,17 +52,11 @@ function updateList(av){
 	$("#artwork").val(0);
 	$("#sbtn").addClass("disabled");
 };
-
-
-
-
-
 //<option value="1">Vincent can Gogh</option>
 //<option value="2">Pablo Picasso</option>
 //<option value="3">Claude Monet</option>
 //<option value="4">Leonardo da Vinci</option>
 //<option value="5">Michelangelo</option>
-
 
 //artworks[artistVal][0 = array of paintings][index of paintings] vs.
 //artworks[artistVal][1 = URL of paintings][index of paintings]
@@ -76,16 +74,3 @@ var artworks = Object.freeze(
 					[]]
 		}
 	);
-
-
-/*
-//artworks[ArtistValueAbove][Painting#]
-var artworks = [
-	//First index never used becuase easier to read :)
-	[],
-	["The Starry Night","Irises","The Potato Eaters", "Cafe Terrace at Night"],
-	["Guernica","Les Demoiselles d'Avignon","The Old Guitarist","Chicago Picasso","The Weeping Woman"],
-	["Bain a la Grenouillere","Bathers at La Grenouillere","Impression, Sunrise","Woman with a Parasol","The Magpie"],
-	["Mona Lisa","The Last Supper","Annunciation","St. John the Baptist","Salvator Mundi"],
-	["Sistine Chapel ceiling", "The Last Judgement", "Pieta", "David", "The Creation of Adam"]];
-*/

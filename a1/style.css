@@ -1,3 +1,20 @@
 body {
     background-color: whitesmoke;
 }
+
+
+.fixed-centered {
+	display: none;
+	background-color: rgba(0, 0, 0,0.90);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 70%;
+}
+
+.close {
+	right:0;
+	margin-right: 5pt;
+}
