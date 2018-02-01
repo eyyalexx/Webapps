@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	//$("#artwork").val() == 0 if nothign selected (title)
+	//$("#artist").val() too
+
 	//When changes made to artists dropdown menu
 	$("#artist").change(function(){
 		var artistVal = $("#artist").val();
@@ -18,9 +21,15 @@ $(document).ready(function() {
 	});
 
 
+	//Display picture and info according to artist and artwork
 	$('#sbtn').click(function(){
-		alert($("#artist").val() + " " + $("#artwork").val());
+		//Submit button will only grab artworkVal and artistVal if enabled
+		if ( !$('#sbtn').hasClass('disabled') ) {
+	 		alert($("#artist").val() + " " + $("#artwork").val());//debug code
+	 	}
 	});
+	 
+
 
 
 });
@@ -29,11 +38,11 @@ function updateList(av){
 	//clear artwork items except first (title)
 	$("#artwork").children('option:not(:first)').remove();
 	//add according to global 2d array "artworks[][]"
-	for(index in artworks[av]){
+	for(index in artworks[av][0]){
 		//skip 0 (title)
 		var artVal = parseInt(index) + 1;
 		//appends <option> tags with appropriate values
-		$("#artwork").append('<option value="' + artVal + '">' + artworks[av][index] + '</option>');
+		$("#artwork").append('<option value="' + artVal + '">' + artworks[av][0][index] + '</option>');
 	}
 	//once populated bring artwork back to title (becuase of bugs)
 	$("#artwork").val(0);
@@ -49,7 +58,27 @@ function updateList(av){
 //<option value="3">Claude Monet</option>
 //<option value="4">Leonardo da Vinci</option>
 //<option value="5">Michelangelo</option>
-//
+
+
+//artworks[artistVal][0 = array of paintings][index of paintings] vs.
+//artworks[artistVal][1 = URL of paintings][index of paintings]
+var artworks = Object.freeze(
+		{
+			1:[["The Starry Night","Irises","The Potato Eaters", "Cafe Terrace at Night"],
+					[]],
+			2:[["Guernica","Les Demoiselles d'Avignon","The Old Guitarist","Chicago Picasso","The Weeping Woman"],
+					[]],
+			3:[["Bain a la Grenouillere","Bathers at La Grenouillere","Impression, Sunrise","Woman with a Parasol","The Magpie"],
+					[]],
+			4:[["Mona Lisa","The Last Supper","Annunciation","St. John the Baptist","Salvator Mundi"],
+					[]],
+			5:[["Sistine Chapel ceiling", "The Last Judgement", "Pieta", "David", "The Creation of Adam"],
+					[]]
+		}
+	);
+
+
+/*
 //artworks[ArtistValueAbove][Painting#]
 var artworks = [
 	//First index never used becuase easier to read :)
@@ -57,5 +86,6 @@ var artworks = [
 	["The Starry Night","Irises","The Potato Eaters", "Cafe Terrace at Night"],
 	["Guernica","Les Demoiselles d'Avignon","The Old Guitarist","Chicago Picasso","The Weeping Woman"],
 	["Bain a la Grenouillere","Bathers at La Grenouillere","Impression, Sunrise","Woman with a Parasol","The Magpie"],
-	["Mona Lisa","The Last Supper","Annunciation","St. John the Baptist","Salvator Mundi",]
-	,[]];
+	["Mona Lisa","The Last Supper","Annunciation","St. John the Baptist","Salvator Mundi"],
+	["Sistine Chapel ceiling", "The Last Judgement", "Pieta", "David", "The Creation of Adam"]];
+*/
