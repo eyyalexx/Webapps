@@ -6,8 +6,10 @@ img {
 
 table {
     text-align: center;
+    table-layout: fixed;
 }
 
 body {
     background-color: whitesmoke;
 }
+
