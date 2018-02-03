@@ -1,0 +1,1 @@
+Some of the key components used in this assignments were html, css, bootstrap and javascript. 
