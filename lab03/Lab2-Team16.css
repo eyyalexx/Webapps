@@ -1,0 +1,15 @@
+img {
+    width: 200px;
+    height: 200px;
+
+}
+
+table {
+    text-align: center;
+    table-layout: fixed;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
