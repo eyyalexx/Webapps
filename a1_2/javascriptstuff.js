@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$("#artist").change(function(){
 		var artistVal = $("#artist").val();
 	
+		$('.home').fadeOut('fast');
 		$("#image").html('<img height="80%" width="80%" src="artists/'+artistVal+'.jpg" alt="Mountain View"/>');
 		$("#info").html("<p>Birth: "+artistInfo[artistVal].birth+"</p>\
 						<p>Death: "+artistInfo[artistVal].death+"</p>\
@@ -18,6 +19,7 @@ $(document).ready(function() {
 	$("#artwork").change(function(){
 		var artworkVal = $("#artwork").val();
 		
+		$('.home').fadeOut('fast');
 		$("#image").html('<img height="80%" width="80%"src="artwork/'+artworkVal+'.jpg" alt="Mountain View"/>');
 		
 		
