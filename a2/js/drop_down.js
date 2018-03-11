@@ -71,5 +71,9 @@ $(document).ready(function () {
         console.log("click ");
     });
 
+    $("#cart").on('click', function(event){
+        console.log("click ");
+    });
 
 });
+
