@@ -30,14 +30,26 @@ function more_artwork_info(){
                     <p>Dimensions: "+artInfo[artworkVal].dimensions+"</p>\
                     <p>Location: "+artInfo[artworkVal].location+"</p>\
                     <p>Artist: "+artInfo[artworkVal].artist+"</p>\
-                    <p>Price: "+artInfo[artworkVal].price+"</p>\
+                    <p>Price: $"+artInfo[artworkVal].price+"</p>\
                     <p>Genre: "+artInfo[artworkVal].genre+"</p>");
 
 }
 
 $(document).ready(function () {
-
     
+    $("#dialog").dialog({
+        autoOpen: false,
+        width: 500,
+        height: 450
+    });
+
+    $("#dialog2").dialog({
+        autoOpen: false
+        
+    });
+
+   
+
     //When changes made to artists dropdown menu
     $("#artist").change(function () {
         $(".thumbnail").css("height", "250px");
@@ -62,17 +74,74 @@ $(document).ready(function () {
 
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_artwork_info(); return false;' href='#'>" + artInfo[artworkVal].name + "</a></p>\
                             <p>Brief Description: "+ artInfo[artworkVal].description + "</p>\
-                            <p>Price: "+ artInfo[artworkVal].price + "</p>");
+                            <p>Price: $"+ artInfo[artworkVal].price + "</p>");
 
 
     });
 
-    $("#artist_link").on('click', function(event){
-        console.log("click ");
+    $("#quantity").change(function () {
+        var artworkVal = $("#artwork").val();
+        if(artworkVal != null){
+
+            var shippingMethod = $("#shipping").val();
+            var quantity = $("#quantity").val();
+            console.log(quantity);
+            var price = artInfo[artworkVal].price*quantity;
+            var tax = price * 0.13;
+            if(shippingMethod == 1)
+                var shipping = 10;
+            else{
+                var shipping = 20;
+            }
+
+            $("#price").text("$"+price);
+            $("#tax").text("$"+tax);
+            $("#total").text("$"+(price+tax+shipping));
+        }
+
     });
+    $("#shipping").change(function () {
+        var artworkVal = $("#artwork").val();
+        if(artworkVal != null){
+
+            var shippingMethod = $("#shipping").val();
+            var quantity = $("#quantity").val();
+            console.log(quantity);
+            var price = artInfo[artworkVal].price*quantity;
+            var tax = price * 0.13;
+            if(shippingMethod == 1)
+                var shipping = 10;
+            else{
+                var shipping = 20;
+            }
+
+            $("#price").text("$"+price);
+            $("#tax").text("$"+tax);
+            $("#shipPrice").text("$"+shipping);
+            $("#total").text("$"+(price+tax+shipping));
+        }
+    });
+    
 
     $("#cart").on('click', function(event){
-        console.log("click ");
+        var artworkVal = $("#artwork").val();
+
+        if(artworkVal != null){
+            //for default values
+            var price = artInfo[artworkVal].price;
+            var tax = price * 0.13;
+            var shipping = 10;
+
+            $("#dialog").dialog("open");
+            $("#ptitle").text(artInfo[artworkVal].name);
+            $("#price").text("$"+price);
+            $("#tax").text("$"+tax);
+            $("#shipPrice").text("$"+shipping);
+            $("#total").text("$"+(price+tax+shipping));
+
+        }else{
+            $("#dialog2").dialog("open");
+        }
     });
 
 });

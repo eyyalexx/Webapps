@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment-2</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/drop_down.js"></script>
@@ -33,6 +37,44 @@
         </div>
     </nav>
     <!-- Nav bar END -->
+
+     <!-- The Dialog  -->
+    <div id="dialog" title="Shopping Cart">
+        
+        <div class="container">
+            <h3 id="ptitle">He </h3>
+            <form action="#">
+                <div class="form-group">
+                        <label for="quantity">Quantity:</label><br>
+                        <input type="number" class="form-control" id="quantity" value="1" min="1" max="5">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Shipping Plan:</label><br>
+                    <select class="form-control" id="shipping">
+                            <option value="1">Standard</option>
+                            <option value="2">Express</option>
+                    </select>
+                </div>
+                <p style="display:inline"><b>Price: </b></p>
+                <p style="display:inline" id="price"></p>
+                <br>
+                <p style="display:inline"><b>Tax: </b></p>
+                <p style="display:inline" id="tax"></p>
+                <br>
+                <p style="display:inline"><b>Shipping: </b></p>
+                <p style="display:inline" id="shipPrice"></p>
+                <br><br>
+                <p style="display:inline"><b>Total: </b></p>
+                <p style="display:inline" id="total"></p>
+                <br><br>
+                <input type="submit" class="btn btn-default" value="Purchase">
+            </form> 
+        </div>
+      </div>
+
+      <div id="dialog2" title="Error">
+          <p>Please select a painting</p>
+      </div>
 
     <div class="menues">
         <select class="form-control" id="artwork">
