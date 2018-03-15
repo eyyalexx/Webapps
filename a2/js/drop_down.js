@@ -1,3 +1,6 @@
+function closeDialog(){
+    $("#dialog").dialog("close");
+}
 
 function more_artist_info() {
 
@@ -79,34 +82,13 @@ $(document).ready(function () {
 
     });
 
-    $("#quantity").change(function () {
+    function updatePrice(){
         var artworkVal = $("#artwork").val();
         if(artworkVal != null){
 
             var shippingMethod = $("#shipping").val();
             var quantity = $("#quantity").val();
-            console.log(quantity);
-            var price = artInfo[artworkVal].price*quantity;
-            var tax = price * 0.13;
-            if(shippingMethod == 1)
-                var shipping = 10;
-            else{
-                var shipping = 20;
-            }
-
-            $("#price").text("$"+price);
-            $("#tax").text("$"+tax);
-            $("#total").text("$"+(price+tax+shipping));
-        }
-
-    });
-    $("#shipping").change(function () {
-        var artworkVal = $("#artwork").val();
-        if(artworkVal != null){
-
-            var shippingMethod = $("#shipping").val();
-            var quantity = $("#quantity").val();
-            console.log(quantity);
+            
             var price = artInfo[artworkVal].price*quantity;
             var tax = price * 0.13;
             if(shippingMethod == 1)
@@ -120,6 +102,15 @@ $(document).ready(function () {
             $("#shipPrice").text("$"+shipping);
             $("#total").text("$"+(price+tax+shipping));
         }
+    }
+
+
+    $("#quantity").change(function () {
+        updatePrice();
+
+    });
+    $("#shipping").change(function () {
+        updatePrice();
     });
     
 
