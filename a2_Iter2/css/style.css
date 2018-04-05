@@ -1,0 +1,19 @@
+.form-control {
+    width: 20%;
+    display: inline-block;
+    margin: auto;
+}
+
+.menues {
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#cart{
+    margin-top: 10px;
+}
+
+.thumbnail {
+    height: 250px; 
+}
