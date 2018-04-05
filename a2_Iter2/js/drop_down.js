@@ -82,6 +82,9 @@ $(document).ready(function () {
 
     });
 
+    //When changes made to museum dropdwon menu
+    
+
     function updatePrice(){
         var artworkVal = $("#artwork").val();
         if(artworkVal != null){
