@@ -27,7 +27,7 @@ include('DbSelect.php');
             </button>
 
             <button type="button" class="btn btn-default btn-sm pull-right" style="margin-right: 2pt" id="manage_button">
-                Manage
+                Maintain
             </button>
 
         </div>
