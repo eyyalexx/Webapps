@@ -26,7 +26,7 @@ include('DbSelect.php');
                 <span class="glyphicon glyphicon-search"></span> Search
             </button>
 
-            <button type="button" class="btn btn-default btn-sm pull-right" style="margin-right: 2pt" id="manage_button">
+            <button type="button" href="php/maintain.php" class="btn btn-default btn-sm pull-right" style="margin-right: 2pt" id="manage_button">
                 Manage
             </button>
 
