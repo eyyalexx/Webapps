@@ -67,7 +67,7 @@ if (isset($_POST['submit'])) {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     } else {
-        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")) {
+        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
             $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
             $stmt->close();
@@ -76,11 +76,10 @@ if (isset($_POST['submit'])) {
         }
         header("Location: maintain.php");
     }
-}/* else {
+} else {
 
     // get the recod from the database
-    if($stmt = $conn->prepare("SELECT * FROM players WHERE Name=?"))
-    {
+    if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?")) {
     $stmt->bind_param("s", $Name);
     $stmt->execute();
 
@@ -91,12 +90,10 @@ if (isset($_POST['submit'])) {
 
     $stmt->close();
     } else {
-        echo "Error: could not prepare SQL statement";
-    } else {
-        header("Location: view.php");
+        header("Location: maintain.php");
     }
 }
-*/
+
 
 //NEW RECORD
 
