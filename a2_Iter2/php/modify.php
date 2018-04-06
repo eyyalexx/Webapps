@@ -45,11 +45,12 @@
 </body>
 </html>
 
-    <?php
-    }
+<?php
+
+}
 
 
-
+/*
 //EDIT RECORD
 
 // if the form's submit button is clicked, we need to process the form
@@ -103,11 +104,11 @@ header("Location: view.php");
         header("Location: view.php");
     }
 }
-
+*/
 
 //NEW RECORD
 
-else {
+//else {
 
 if (isset($_POST['submit'])) {
     $Name = $_POST['Name'];
@@ -139,7 +140,7 @@ if (isset($_POST['submit'])) {
 } else {
     renderForm();
 }
-}
+//}
 
 $conn->close();
 ?>
