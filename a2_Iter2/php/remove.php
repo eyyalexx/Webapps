@@ -1,7 +1,7 @@
 <?php
 include('DbConnect.php');
-
-if (isset($_GET['Name'])) {
+echo $_GET['Name'];
+/*if (isset($_GET['Name'])) {
     $Name = $_GET['Name'];
     if ($stmt = $conn->prepare("DELETE FROM Artists WHERE Name = ? LIMIT 1")) {
         $stmt->bind_param("s",$Name);
@@ -13,8 +13,6 @@ if (isset($_GET['Name'])) {
     $conn->close();
 
     header("Location: maintain.php");
-} else {
-    header("Location: maintain.php");
-}
+}*/
 
 ?>
