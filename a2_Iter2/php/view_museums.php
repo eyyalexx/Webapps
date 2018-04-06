@@ -27,7 +27,7 @@ echo "<td>" . $row->History . "</td>";
 echo "<td>" . $row->ArtWorks . "</td>";
 echo "<td>" . $row->Description . "</td>";
 echo "<td><a href='modify.php?id=" . $row->id . "'>Edit</a></td>";
-echo "<td><a href='delete.php?id=" . $row->id . "'>Delete</a></td>";
+echo "<td><a href='remove.php?id=" . $row->id . "'>Delete</a></td>";
 echo "</tr>";
 }
 

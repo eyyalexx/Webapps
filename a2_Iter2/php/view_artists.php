@@ -22,11 +22,12 @@ echo "<tr>";
 echo "<td>" . $row->Name . "</td>";
 echo "<td>" . $row->Description . "</td>";
 echo "<td>" . $row->Birth . "</td>";
+echo "<td>" . $row->Death . "</td>";
 echo "<td>" . $row->Living . "</td>";
 echo "<td>" . $row->Genres . "</td>";
 echo "<td>" . $row->Famous . "</td>";
 echo "<td><a href='modify.php?id=" . $row->id . "'>Edit</a></td>";
-echo "<td><a href='delete.php?id=" . $row->id . "'>Delete</a></td>";
+echo "<td><a href='remove.php?id=" . $row->id . "'>Delete</a></td>";
 echo "</tr>";
 }
 
