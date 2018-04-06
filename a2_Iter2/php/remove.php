@@ -1,7 +1,7 @@
 <?php
-include('DbConnect.php');
+include('../DbConnect.php');
 //echo $_GET['Name'];
-if (isset($_GET['Name'])) {
+if (isset($_GET['Name'])) {    
     $Name = $_GET['Name'];
     if ($stmt = $conn->prepare("DELETE FROM Artists WHERE Name = ?")) {
         $stmt->bind_param("s", $Name);
