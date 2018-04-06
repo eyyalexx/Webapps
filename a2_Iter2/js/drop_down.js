@@ -285,13 +285,18 @@ $(document).ready(function () {
             data: {text: searchText},
             success: function (data) { 
                 console.log(data);
+                $("#searchResults").html("");
+                for(var i = 0 ; i < data.length; i++){
+                    $("#searchResults").append("<p>"+data[i].Name+"</p>");
+                }
             },
             error: function(e) {
                 console.log(e.message);
             }
         });
-
         $("#search-dialog").dialog("close");
+
+        
     });
 
 
