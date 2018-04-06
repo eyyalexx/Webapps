@@ -53,15 +53,27 @@ function more_artist_info() {
 
     $(".thumbnail").css("height", "500px");
 
-    var artistVal = $("#artist").val();
+    var artistVal = $("#artist").val()-1;
 
     $('.home').fadeOut('fast');
-    $("#image").html('<img height="50%" width="50%" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
-    /*$("#info").html("<p>Birth: " + artistInfo[artistVal].birth + "</p>\
-						<p>Death: "+ artistInfo[artistVal].death + "</p>\
-						<p>Place of living: "+ artistInfo[artistVal].living + "</p>\
-						<p>Generes: "+ artistInfo[artistVal].genres + "</p>\
-                        <p>Famous: "+ artistInfo[artistVal].famous + "</p>");*/
+
+    $.ajax({ 
+        type: 'POST', 
+        url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+        dataType: 'json',
+        data: {imageID: artistInfo[artistVal].ImageID},
+        success: function (data) { 
+            $("#image").html('<img height="50%" width="50%" src="'+data[0].Link+'" alt="Mountain View"/>');
+        },
+        error: function(e) {
+            console.log(e.message);
+        }
+    });
+    $("#info").html("<p>Birth: " + artistInfo[artistVal].Birth + "</p>\
+						<p>Death: "+ artistInfo[artistVal].Death + "</p>\
+						<p>Place of living: "+ artistInfo[artistVal].Living + "</p>\
+						<p>Generes: "+ artistInfo[artistVal].Genres + "</p>\
+                        <p>Famous: "+ artistInfo[artistVal].Famous + "</p>");
 }
 
 function more_artwork_info(){
@@ -70,17 +82,26 @@ function more_artwork_info(){
     var artworkVal = $("#artwork").val();
     
     $('.home').fadeOut('fast');
-    $("#image").html('<img height="50%" width="50%"src="images/artwork/'+artworkVal+'.jpg" alt="Mountain View"/>');
-    
-    
-    
-    $("#info").html("<p>Date: "+artInfo[artworkVal].date+"</p>\
-                    <p>Type: "+artInfo[artworkVal].type+"</p>\
-                    <p>Dimensions: "+artInfo[artworkVal].dimensions+"</p>\
-                    <p>Location: "+artInfo[artworkVal].location+"</p>\
-                    <p>Artist: "+artInfo[artworkVal].artist+"</p>\
-                    <p>Price: $"+artInfo[artworkVal].price+"</p>\
-                    <p>Genre: "+artInfo[artworkVal].genre+"</p>");
+
+    $.ajax({ 
+        type: 'POST', 
+        url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+        dataType: 'json',
+        data: {imageID: artworkInfo[artworkVal].ImageID},
+        success: function (data) { 
+            $("#image").html('<img height="50%" width="50%" src="'+data[0].Link+'" alt="Mountain View"/>');
+        },
+        error: function(e) {
+            console.log(e.message);
+        }
+    });
+    $("#info").html("<p>Date: "+artworkInfo[artworkVal].Date+"</p>\
+                    <p>Type: "+artworkInfo[artworkVal].Type+"</p>\
+                    <p>Dimensions: "+artworkInfo[artworkVal].Dimensions+"</p>\
+                    <p>Location: "+artworkInfo[artworkVal].Location+"</p>\
+                    <p>Artist: "+artworkInfo[artworkVal].Artist+"</p>\
+                    <p>Price: $"+artworkInfo[artworkVal].Price+"</p>\
+                    <p>Genre: "+artworkInfo[artworkVal].Genre+"</p>");
 
 }
 
@@ -92,11 +113,24 @@ function more_museum_info(){
     $('.home').fadeOut('fast');
     $("#image").html('<img height="50%" width="50%"src="images/museums/'+museumVal+'.jpg" alt="Mountain View"/>');
     
-    $("#info").html("<p>Date of establishing: "+musInfo[museumVal].est+"</p>\
-                    <p>Location and adress: "+musInfo[museumVal].location+"</p>\
-                    <p>People involved: "+musInfo[museumVal].people+"</p>\
-                    <p>History: "+musInfo[museumVal].history+"</p>\
-                    <p>Artworks: "+musInfo[museumVal].artworks+"</p>");
+    $.ajax({ 
+        type: 'POST', 
+        url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+        dataType: 'json',
+        data: {imageID: museumInfo[museumVal].ImageID},
+        success: function (data) { 
+            $("#image").html('<img height="50%" width="50%" src="'+data[0].Link+'" alt="Mountain View"/>');
+        },
+        error: function(e) {
+            console.log(e.message);
+        }
+    });
+
+    $("#info").html("<p>Date of establishing: "+museumInfo[museumVal].Description+"</p>\
+                    <p>Location and adress: "+museumInfo[museumVal].Location+"</p>\
+                    <p>People involved: "+museumInfo[museumVal].People+"</p>\
+                    <p>History: "+museumInfo[museumVal].History+"</p>\
+                    <p>Artworks: "+museumInfo[museumVal].Artworks+"</p>");
 }
 
 $(document).ready(function () {
