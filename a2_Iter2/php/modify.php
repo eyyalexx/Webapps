@@ -160,7 +160,8 @@ else
 header("Location: maintain.php");
 }
 }
-}
+} else {
+
 
 
 
@@ -192,6 +193,6 @@ if (isset($_POST['submit'])) {
     renderForm();
 }
 
-
+}
 $conn->close();
 ?>
