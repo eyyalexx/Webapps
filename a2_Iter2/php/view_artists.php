@@ -26,8 +26,8 @@ echo "<td>" . $row->Death . "</td>";
 echo "<td>" . $row->Living . "</td>";
 echo "<td>" . $row->Genres . "</td>";
 echo "<td>" . $row->Famous . "</td>";
-echo "<td><a href='modify.php?id=" . $row->id . "'>Edit</a></td>";
-echo "<td><a href='remove.php?id=" . $row->id . "'>Delete</a></td>";
+echo "<td><a href='modify.php?id=" . $row->Name . "'>Edit</a></td>";
+echo "<td><a href='remove.php?id=" . $row->Name . "'>Delete</a></td>";
 echo "</tr>";
 }
 
