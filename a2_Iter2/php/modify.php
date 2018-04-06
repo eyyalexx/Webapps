@@ -16,12 +16,6 @@
         <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
     </h1>
 
-    <?php
-    if ($error != '') {
-        echo "<div>" . $error . "</div>";
-    }
-    ?>
-
     <form action="" method="post">
 
     <div>
@@ -72,22 +66,20 @@
 //else {
 
 if (isset($_POST['submit'])) {
-    echo "hello?!";
     $Name = $_POST['Name'];
-    /*$Description = htmlentities($_POST['Description'], ENT_QUOTES);
-    $Birth = htmlentities($_POST['Birth'], ENT_QUOTES);
-    $Death = htmlentities($_POST['Death'], ENT_QUOTES);
-    $Living = htmlentities($_POST['Living'], ENT_QUOTES);
-    $Genres = htmlentities($_POST['Genres'], ENT_QUOTES);
-    $Famous = htmlentities($_POST['Famous'], ENT_QUOTES);*/
+    $Description = $_POST['Description'];
+    $Birth = $_POST['Birth'];
+    $Death = $_POST['Death'];
+    $Living = $_POST['Living'];
+    $Genres = $_POST['Genres'];
+    $Famous = $_POST['Famous'];
 
 
 
-    /*if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
+    if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    }
-    else {
+    } /*else {
         if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?)")) {
             $stmt->bind_param("ss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
