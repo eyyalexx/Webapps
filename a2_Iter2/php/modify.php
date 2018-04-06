@@ -67,9 +67,65 @@
     }
 
 
+
+//EDIT RECORD
+
+// if the form's submit button is clicked, we need to process the form
+if (isset($_POST['submit'])) {
+
+
+    $Name = $_POST['Name'];
+    $Description = $_POST['Description'];
+    $Birth = $_POST['Birth'];
+    $Death = $_POST['Death'];
+    $Living = $_POST['Living'];
+    $Genres = $_POST['Genres'];
+    $Famous = $_POST['Famous'];
+
+// check that firstname and lastname are both not empty
+if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
+    $error = 'ERROR: Please fill in all required fields!';
+    renderForm($firstname, $lastname, $error, $id);
+}
+else
+{
+// if everything is fine, update the record in the database
+if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")) {
+    $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+    $stmt->execute();
+    $stmt->close();
+} else {
+    echo "ERROR: could not prepare SQL statement.";
+}
+header("Location: view.php");
+} else {
+    echo "Error!";
+}
+} else {
+
+    // get the recod from the database
+    if($stmt = $conn->prepare("SELECT * FROM players WHERE Name=?"))
+    {
+    $stmt->bind_param("s", $Name);
+    $stmt->execute();
+
+    $stmt->bind_result($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+    $stmt->fetch();
+
+    renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+
+    $stmt->close();
+    } else {
+        echo "Error: could not prepare SQL statement";
+    } else {
+        header("Location: view.php");
+    }
+}
+
+
 //NEW RECORD
 
-//else {
+else {
 
 if (isset($_POST['submit'])) {
     $Name = $_POST['Name'];
@@ -101,7 +157,7 @@ if (isset($_POST['submit'])) {
 } else {
     renderForm();
 }
-//}
+}
 
 $conn->close();
 ?>
