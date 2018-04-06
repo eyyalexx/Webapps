@@ -25,6 +25,13 @@
     height: 250px; 
 }
 
-iframe{
-    overflow:hidden;
+
+
+td {
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 10px;
 }
