@@ -245,13 +245,14 @@ $(document).ready(function () {
             var price = artworkInfo[artworkVal].Price;
             var tax = price * 0.13;
             var shipping = 10;
+            var total = price+tax+shipping;
 
             $("#dialog").dialog("open");
             $("#ptitle").text(artworkInfo[artworkVal].Name);
             $("#price").text("$"+price);
             $("#tax").text("$"+tax);
             $("#shipPrice").text("$"+shipping);
-            $("#total").text("$"+(price+tax+shipping));
+            $("#total").text("$"+total);
 
         }else{
             $("#dialog2").dialog("open");
@@ -273,10 +274,12 @@ $(document).ready(function () {
                 var shipping = 20;
             }
 
+            var total = price+tax+shipping;
+
             $("#price").text("$"+price);
             $("#tax").text("$"+tax);
             $("#shipPrice").text("$"+shipping);
-            $("#total").text("$"+(price+tax+shipping));
+            $("#total").text("$"+total);
         }
     }
 
