@@ -85,10 +85,10 @@ if (isset($_POST['submit'])) {
     if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    }/*
+    }
     else {
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?)")) {
-            $stmt->bind_param("ss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
             $stmt->close();
         }
@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
             echo "ERROR: Could not prepare SQL statement.";
         }
     header("Location: maintain.php");
-    }*/
+    }
 
 } else {
     renderForm();
