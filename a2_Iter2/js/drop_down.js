@@ -79,7 +79,7 @@ function more_artist_info() {
 function more_artwork_info(){
     $(".thumbnail").css("height", "500px");
 
-    var artworkVal = $("#artwork").val();
+    var artworkVal = $("#artwork").val()-1;
     
     $('.home').fadeOut('fast');
 
@@ -108,7 +108,7 @@ function more_artwork_info(){
 function more_museum_info(){
     $(".thumbnail").css("height", "500px");
 
-    var museumVal = $("#museum").val();
+    var museumVal = $("#museum").val()-1;
     
     $('.home').fadeOut('fast');
     $("#image").html('<img height="50%" width="50%"src="images/museums/'+museumVal+'.jpg" alt="Mountain View"/>');
