@@ -18,6 +18,8 @@
     include('view_museums.php');
     ?>
 
+    <a href="modify.php">Add New Record</a>
+
     
     
 </body>

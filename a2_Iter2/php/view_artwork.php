@@ -4,7 +4,7 @@
 include('../DbConnect.php');
 
 // get the records from the database
-if ($result = $conn->query("SELECT * FROM Artwork"))
+if ($result = $conn->query("SELECT * FROM ArtWork"))
 {
 // display records if there are records to display
 if ($result->num_rows > 0)
