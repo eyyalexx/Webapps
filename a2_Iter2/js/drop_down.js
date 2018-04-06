@@ -38,6 +38,21 @@ function more_artwork_info(){
 
 }
 
+function more_museum_info(){
+    $(".thumbnail").css("height", "500px");
+
+    var museumVal = $("#museum").val();
+    
+    $('.home').fadeOut('fast');
+    $("#image").html('<img height="50%" width="50%"src="images/museums/'+museumVal+'.jpg" alt="Mountain View"/>');
+    
+    $("#info").html("<p>Date of establishing: "+musInfo[museumVal].est+"</p>\
+                    <p>Location and adress: "+musInfo[museumVal].location+"</p>\
+                    <p>People involved: "+musInfo[museumVal].people+"</p>\
+                    <p>History: "+musInfo[museumVal].history+"</p>\
+                    <p>Artworks: "+musInfo[museumVal].artworks+"</p>");
+}
+
 $(document).ready(function () {
     
     $("#dialog").dialog({
@@ -78,12 +93,20 @@ $(document).ready(function () {
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_artwork_info(); return false;' href='#'>" + artInfo[artworkVal].name + "</a></p>\
                             <p>Brief Description: "+ artInfo[artworkVal].description + "</p>\
                             <p>Price: $"+ artInfo[artworkVal].price + "</p>");
-
-
     });
 
     //When changes made to museum dropdwon menu
-    
+    $("#museum").change(function () {
+        $(".thumbnail").css("height", "250px");
+
+        var museumVal = $("#museum").val();
+
+        $('.home').fadeOut('fast');
+        $("#image").html('<img height="150px" width="150px"src="images/museums/' + museumVal + '.jpg" alt="Mountain View"/>');
+
+        $("#info").html("<p>Name: <a id='artist_link' onClick='more_museum_info(); return false;' href='#'>" + musInfo[museumVal].name + "</a></p>\
+                            <p>Brief Description: "+ musInfo[museumVal].etc + "</p>");
+    });
 
     function updatePrice(){
         var artworkVal = $("#artwork").val();
