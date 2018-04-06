@@ -16,6 +16,32 @@ $.ajax({
         }
 });
 
+$.ajax({ 
+    type: 'GET', 
+    url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/artworkInfo.php', 
+    dataType: 'json',
+    success: function (data) { 
+            artworkInfo = data;
+
+    },
+    error: function(e) {
+        console.log(e.message);
+    }
+});
+
+$.ajax({ 
+    type: 'GET', 
+    url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/museumInfo.php', 
+    dataType: 'json',
+    success: function (data) { 
+            museumInfo = data;
+
+    },
+    error: function(e) {
+        console.log(e.message);
+    }
+});
+
 
 function closeDialog(){
     $("#dialog").dialog("close");
@@ -101,13 +127,13 @@ $(document).ready(function () {
     $("#artist").change(function () {
         $(".thumbnail").css("height", "250px");
         
-        var artistVal = $("#artist").val();
+        var artistVal = $("#artist").val()-1;
 
         $('.home').fadeOut('fast');
         $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].Name + "</a></p>\
                             <p>Brief Description: "+ artistInfo[artistVal].Description + "</p>");
-        
+        console.log(artistInfo);
 	   
 
     });
@@ -116,27 +142,30 @@ $(document).ready(function () {
     $("#artwork").change(function () {
         $(".thumbnail").css("height", "250px");
 
-        var artworkVal = $("#artwork").val();
+        var artworkVal = $("#artwork").val()-1;
 
         $('.home').fadeOut('fast');
         $("#image").html('<img height="150px" width="150px"src="images/artwork/' + artworkVal + '.jpg" alt="Mountain View"/>');
 
-        $("#info").html("<p>Name: <a id='artist_link' onClick='more_artwork_info(); return false;' href='#'>" + artInfo[artworkVal].name + "</a></p>\
-                            <p>Brief Description: "+ artInfo[artworkVal].description + "</p>\
-                            <p>Price: $"+ artInfo[artworkVal].price + "</p>");
+        $("#info").html("<p>Name: <a id='artist_link' onClick='more_artwork_info(); return false;' href='#'>" + artworkInfo[artworkVal].Name + "</a></p>\
+                            <p>Brief Description: "+ artworkInfo[artworkVal].Description + "</p>\
+                            <p>Price: $"+ artworkInfo[artworkVal].Price + "</p>");
+        console.log(artworkInfo);
+    
     });
 
     //When changes made to museum dropdwon menu
     $("#museum").change(function () {
         $(".thumbnail").css("height", "250px");
 
-        var museumVal = $("#museum").val();
+        var museumVal = $("#museum").val()-1;
 
         $('.home').fadeOut('fast');
         $("#image").html('<img height="150px" width="150px"src="images/museums/' + museumVal + '.jpg" alt="Mountain View"/>');
 
-        $("#info").html("<p>Name: <a id='artist_link' onClick='more_museum_info(); return false;' href='#'>" + musInfo[museumVal].name + "</a></p>\
-                            <p>Brief Description: "+ musInfo[museumVal].etc + "</p>");
+        $("#info").html("<p>Name: <a id='artist_link' onClick='more_museum_info(); return false;' href='#'>" + museumInfo[museumVal].Name + "</a></p>\
+                            <p>Brief Description: "+ museumInfo[museumVal].Description + "</p>");
+        console.log(museumInfo);
     });
 
     function updatePrice(){
