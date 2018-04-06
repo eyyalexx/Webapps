@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-include('pages\headers\header_main.php');
+include('pages/headers/header_main.php');
 ?>
 <body>
 
