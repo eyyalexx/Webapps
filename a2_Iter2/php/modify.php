@@ -73,14 +73,17 @@
 
 if (isset($_POST['submit'])) {
     $Name = $_POST['Name'];
-    $Description = $_POST['Description'];
+    /*$Description = $_POST['Description'];
     $Birth = $_POST['Birth'];
     $Death = $_POST['Death'];
     $Living = $_POST['Living'];
     $Genres = $_POST['Genres'];
-    $Famous = $_POST['Famous'];
+    $Famous = $_POST['Famous'];*/
 
-    $conn->query("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES ($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous)");
+    //, Description, Birth, Death, Living, Genres, Famous
+    //, $Description, $Birth, $Death, $Living, $Genres, $Famous
+    
+    $conn->query("INSERT Artists (Name) VALUES ($Name)");
     
 
 } else {
