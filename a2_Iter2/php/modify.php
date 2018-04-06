@@ -53,6 +53,8 @@
 
 //EDIT RECORD
 
+if (isset($_GET['Name'])) {
+
 // if the form's submit button is clicked, we need to process the form
 if (isset($_POST['submit'])) {
     echo "<script type='text/javascript'>alert('EDIT');</script>";
@@ -73,11 +75,11 @@ if (isset($_POST['submit'])) {
     }
     header("Location: maintain.php");
 }
-
+}
 
 //NEW RECORD
 
-//else {
+else {
 
 if (isset($_POST['submit'])) {
     echo "<script type='text/javascript'>alert('NEW');</script>";
@@ -100,7 +102,7 @@ if (isset($_POST['submit'])) {
 } else {
     renderForm();
 }
-//}
+}
 
 $conn->close();
 ?>
