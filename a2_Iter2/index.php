@@ -26,7 +26,7 @@ include('DbSelect.php');
                 <span class="glyphicon glyphicon-search"></span> Search
             </button>
 
-            <button type="button" href="php/maintain.php" class="btn btn-default btn-sm pull-right" style="margin-right: 2pt" id="manage_button">
+            <button type="button" class="btn btn-default btn-sm pull-right" style="margin-right: 2pt" id="manage_button">
                 Manage
             </button>
 
@@ -85,27 +85,6 @@ include('DbSelect.php');
 
       <!-- The Dialog for SEARCH END  -->
 
-        <div id="manage-dialog" title="manage">
-            <div class="container">
-                <input class="form-control" id="add-field">
-                <button type="submit" class="btn btn-default btn-sm" id="manage-add">
-                    Add
-                </button>
-                <br>
-                <input class="form-control" id="delete-field">
-                <button type="submit" class="btn btn-default btn-sm" id="manage-remove">
-                    Delete
-                </button>
-                <br>
-                <button type="submit" class="btn btn-default btn-sm" id="manage-modify">
-                    Modify
-                </button>
-            </div>
-        </div>
-      <!-- The Dialog for MANAGE -->
-
-
-      <!-- The Dialog for MANAGE END -->
 
       <!-- The Dialog END  -->
 
