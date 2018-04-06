@@ -301,10 +301,7 @@ $(document).ready(function () {
 
 
     $("#manage_button").on('click', function(event){
-        $("#manage-dialog").dialog({
-            position: { my: "right top", at: "right top", of: window }
-        });
-        $("#manage-dialog").dialog("open");
+        window.location.replace("php/maintain.php");
     });
     
 
