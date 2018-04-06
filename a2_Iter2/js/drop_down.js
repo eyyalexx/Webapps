@@ -162,7 +162,7 @@ $(document).ready(function () {
             type: 'POST', 
             url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
             dataType: 'json',
-            data: {imageID: artwork[artworkVal].ImageID},
+            data: {imageID: artworkInfo[artworkVal].ImageID},
             success: function (data) { 
                 $("#image").html('<img height="150px" width="150px" src="'+data[0].Link+'" alt="Mountain View"/>');
             },
