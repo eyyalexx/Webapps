@@ -52,7 +52,7 @@
 
 if (isset($_GET['Name'])) {
 //EDIT RECORD
-
+$Name2 = $_GET['Name'];
 // if the form's submit button is clicked, we need to process the form
 if (isset($_POST['submit'])) {
     echo "<script type='text/javascript'>alert('EDIT');</script>";
@@ -64,8 +64,8 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
-        $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
+    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = $Name2")) {
+        $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
         $stmt->execute();
         $stmt->close();
     } else {
@@ -73,6 +73,26 @@ if (isset($_POST['submit'])) {
     }
     header("Location: maintain.php");
 }
+/*
+    if (isset($_GET['Name'])) {
+    $Name = $_GET['Name'];
+
+    // get the recod from the database
+    if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?"))
+    {
+    $stmt->bind_param("s", $Name);
+    $stmt->execute();
+
+    $stmt->bind_result($id, $firstname, $lastname);
+    $stmt->fetch();
+
+    // show the form
+    renderForm($firstname, $lastname, NULL, $id);
+
+    $stmt->close();
+    }
+    */
+
 } else {
 
 
