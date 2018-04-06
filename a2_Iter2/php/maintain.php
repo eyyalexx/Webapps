@@ -13,7 +13,9 @@
 </head>
 <body>
     <?php
-    include('view.php');
+    include('view_artists.php');
+    include('view_artwork.php');
+    include('view_museums.php');
     ?>
 
     
