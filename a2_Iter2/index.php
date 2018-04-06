@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 include('pages/headers/header_main.php');
+include('DbSelect.php');
 ?>
 <body>
 
@@ -108,16 +109,22 @@ include('pages/headers/header_main.php');
 
       <!-- The Dialog END  -->
 
-      
+    <?php
+    $artworks = getArtWorkNames();
+    $art = getArtistNames();
+    $museums = getMuseumNames();
+    
+    ?>
 
     <div class="menues">
         <select class="form-control" id="artwork">
             <option value="0" selected disabled>Art Work</option>
-            <option value="1">The Starry Night</option>
-            <option value="2">Mona Lisa</option>
-            <option value="3">Guernica</option>
-            <option value="4">The Last Supper</option>
-            <option value="5">Sistine Chapel ceiling</option>
+
+            <?php
+                for($i = 0; $i < sizeof($artworks); $i++){
+                    echo "<option value='".$i+1."'>".$artworks[$i]."</option>"
+                }
+            ?>
         </select>
 
         <select class="form-control" id="artist">
