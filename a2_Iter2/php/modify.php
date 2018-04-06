@@ -67,8 +67,8 @@ if (isset($_POST['submit'])) {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     } else {
-        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
-            $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
+        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = $Name")) {
+            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
             $stmt->close();
         } else {
@@ -76,23 +76,7 @@ if (isset($_POST['submit'])) {
         }
         header("Location: maintain.php");
     }
-} /*else {
-
-    // get the recod from the database
-    if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?")) {
-    $stmt->bind_param("s", $Name);
-    $stmt->execute();
-
-    $stmt->bind_result($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    $stmt->fetch();
-
-    renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-
-    $stmt->close();
-    } else {
-        header("Location: maintain.php");
-    }
-}*/
+}
 
 
 //NEW RECORD
