@@ -18,7 +18,7 @@
     include('view_artwork.php');
     echo "<a href='modify_artworks.php'>Add New ArtWorks Record</a>";
     include('view_museums.php');
-    echo "<a href='modify_museums.php'>Add New Museums Record</a>"";
+    echo "<a href='modify_museums.php'>Add New Museums Record</a>";
     ?>
 
     
