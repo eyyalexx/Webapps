@@ -43,6 +43,7 @@ $.ajax({
 });
 
 
+
 function closeDialog(){
     $("#dialog").dialog("close");
 }
@@ -130,11 +131,23 @@ $(document).ready(function () {
         var artistVal = $("#artist").val()-1;
 
         $('.home').fadeOut('fast');
-        $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
+
+        $.ajax({ 
+            type: 'POST', 
+            url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+            dataType: 'json',
+            data: {imageID: artistInfo[artistVal].ImageID},
+            success: function (data) { 
+                $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
+            },
+            error: function(e) {
+                console.log(e.message);
+            }
+        });
+
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].Name + "</a></p>\
                             <p>Brief Description: "+ artistInfo[artistVal].Description + "</p>");
         console.log(artistInfo);
-	   
 
     });
 

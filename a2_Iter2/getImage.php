@@ -1,6 +1,8 @@
-<?php 
+<?php
+$imageID = $_POST["imageID"]; 
 include 'DbConnect.php';
-$sql = "SELECT * FROM ArtWork ORDER BY Name ASC";
+
+$sql = "SELECT Link FROM Images where ImageID=$imageID";
     $result = $conn->query($sql);
 
     $data = [];
@@ -16,4 +18,6 @@ $sql = "SELECT * FROM ArtWork ORDER BY Name ASC";
 
     echo json_encode($data);
     $conn->close();
+
+
 ?>
