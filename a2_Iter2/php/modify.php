@@ -55,8 +55,6 @@
 
 // if the form's submit button is clicked, we need to process the form
 if (isset($_POST['submit'])) {
-
-
     $Name = $_POST['Name'];
     $Description = $_POST['Description'];
     $Birth = $_POST['Birth'];
@@ -70,14 +68,15 @@ if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living
     $error = 'ERROR: Please fill in all required fields!';
     renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
 } else {
-    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")) {
+    //$stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")
+    if ($stmt = $conn->prepare("UPDATE Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
         $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
         $stmt->execute();
         $stmt->close();
     } else {
         echo "ERROR: could not prepare SQL statement.";
     }
-    header("Location: view.php");
+    header("Location: maintain.php");
 } else {
     echo "Error!";
 }
@@ -121,8 +120,7 @@ if (isset($_POST['submit'])) {
     if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    }
-    else {
+    } else {
         if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
             $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
