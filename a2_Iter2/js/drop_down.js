@@ -158,7 +158,18 @@ $(document).ready(function () {
         var artworkVal = $("#artwork").val()-1;
 
         $('.home').fadeOut('fast');
-        $("#image").html('<img height="150px" width="150px"src="images/artwork/' + artworkVal + '.jpg" alt="Mountain View"/>');
+        $.ajax({ 
+            type: 'POST', 
+            url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+            dataType: 'json',
+            data: {imageID: artworkInfo[artworkVal].ImageID},
+            success: function (data) { 
+                $("#image").html('<img height="150px" width="150px" src="'+data[0].Link+'" alt="Mountain View"/>');
+            },
+            error: function(e) {
+                console.log(e.message);
+            }
+        });
 
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_artwork_info(); return false;' href='#'>" + artworkInfo[artworkVal].Name + "</a></p>\
                             <p>Brief Description: "+ artworkInfo[artworkVal].Description + "</p>\
@@ -174,7 +185,18 @@ $(document).ready(function () {
         var museumVal = $("#museum").val()-1;
 
         $('.home').fadeOut('fast');
-        $("#image").html('<img height="150px" width="150px"src="images/museums/' + museumVal + '.jpg" alt="Mountain View"/>');
+        $.ajax({ 
+            type: 'POST', 
+            url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/getImage.php', 
+            dataType: 'json',
+            data: {imageID: museumInfo[museumVal].ImageID},
+            success: function (data) { 
+                $("#image").html('<img height="150px" width="150px" src="'+data[0].Link+'" alt="Mountain View"/>');
+            },
+            error: function(e) {
+                console.log(e.message);
+            }
+        });
 
         $("#info").html("<p>Name: <a id='artist_link' onClick='more_museum_info(); return false;' href='#'>" + museumInfo[museumVal].Name + "</a></p>\
                             <p>Brief Description: "+ museumInfo[museumVal].Description + "</p>");
