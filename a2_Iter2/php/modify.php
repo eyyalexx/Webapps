@@ -149,7 +149,7 @@ $stmt->bind_result($id, $Name, $Description, $Birth, $Death, $Living, $Genres, $
 $stmt->fetch();
 
 // show the form
-renderForm($Name, $Description, NULL, $id);
+renderForm($id);
 
 $stmt->close();
 }
@@ -160,7 +160,8 @@ else
 header("Location: maintain.php");
 }
 }
-}
+} else {
+
 
 
 
@@ -192,6 +193,6 @@ if (isset($_POST['submit'])) {
     renderForm();
 }
 
-
+}
 $conn->close();
 ?>
