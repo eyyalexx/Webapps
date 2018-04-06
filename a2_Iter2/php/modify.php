@@ -73,8 +73,8 @@
 
 if (isset($_POST['submit'])) {
     echo "hello?!";
-    /*$Name = htmlentities($_POST['Name'], ENT_QUOTES);
-    $Description = htmlentities($_POST['Description'], ENT_QUOTES);
+    $Name = $_POST['Name'];
+    /*$Description = htmlentities($_POST['Description'], ENT_QUOTES);
     $Birth = htmlentities($_POST['Birth'], ENT_QUOTES);
     $Death = htmlentities($_POST['Death'], ENT_QUOTES);
     $Living = htmlentities($_POST['Living'], ENT_QUOTES);
