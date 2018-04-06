@@ -45,7 +45,6 @@
 
      <!-- The Dialog  -->
     <div id="dialog" title="Shopping Cart">
-        
         <div class="container">
             <h3 id="ptitle">He </h3>
             <form action="#">
@@ -75,17 +74,23 @@
                 <input type="submit" onClick="closeDialog();return false;" class="btn btn-default" value="Purchase">
             </form> 
         </div>
-      </div>
+    </div>
 
-      <div id="dialog2" title="Error">
-          <p>Please select a painting</p>
-      </div>
+    <div id="dialog2" title="Error">
+        <p>Please select a painting</p>
+    </div>
 
       <!-- The Dialog for SEARCH  -->
 
-      <div id="search-dialog" title="Search">
-          <p>Searching</p>
-      </div>
+        <div id="search-dialog" title="Search">
+            <div class="container">
+                <input class="form-control" type="search" id="search-input">
+                <br>
+                <button type="submit" class="btn btn-default btn-sm" id="search-submit">
+                    <span class="glyphicon glyphicon-search"></span> Search
+                </button>
+            </div>
+        </div>
 
       <!-- The Dialog for SEARCH END  -->
 
