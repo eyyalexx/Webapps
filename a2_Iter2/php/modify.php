@@ -98,9 +98,9 @@ if (isset($_POST['submit'])) {
     header("Location: maintain.php");
     }*/
 
-} /*else {
+} else {
     renderForm();
-}*/
+}
 //}
 
 $conn->close();
