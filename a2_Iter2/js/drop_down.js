@@ -2,18 +2,19 @@ var artistInfo = null;
 var artworkInfo = null;
 var museumInfo = null;
 
-function getInfo(){
-    
-    $.ajax({ 
+
+$.ajax({ 
         type: 'GET', 
         url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/artistInfo.php', 
         dataType: 'json',
         success: function (data) { 
                 artistInfo = data;
+                console.log("HH"+data);
+        },
+        error: function(e) {
+            console.log(e.message);
         }
-    });
-}
-getInfo();
+});
 
 
 function closeDialog(){
