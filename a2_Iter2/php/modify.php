@@ -1,5 +1,5 @@
 <?php
-    include("DbConnect.php");
+    include("../DbConnect.php");
     function renderForm($Name = '', $Description ='', $Birth = '', $Death = '', $Living = '', $Genres = '', $Famous = '')
     {
 ?>
@@ -82,7 +82,7 @@ if (isset($_POST['submit'])) {
 
     //, Description, Birth, Death, Living, Genres, Famous
     //, $Description, $Birth, $Death, $Living, $Genres, $Famous
-    
+
     $conn->query("INSERT Artists (Name) VALUES ($Name)");
     
 
