@@ -111,7 +111,7 @@ include('DbSelect.php');
 
     <?php
     $artworks = getArtWorkNames();
-    $art = getArtistNames();
+    $artists = getArtistNames();
     $museums = getMuseumNames();
     
     ?>
@@ -122,27 +122,27 @@ include('DbSelect.php');
 
             <?php
                 for($i = 0; $i < sizeof($artworks); $i++){
-                    echo "<option value='".$i+1."'>".$artworks[$i]."</option>"
+                    echo "<option value='".($i+1)."'>".$artworks[$i]."</option>";
                 }
             ?>
         </select>
 
         <select class="form-control" id="artist">
             <option value="0" selected disabled>Artists</option>
-            <option value="1">Vincent Van Gogh</option>
-            <option value="2">Pablo Picasso</option>
-            <option value="3">Claude Monet</option>
-            <option value="4">Leonardo da Vinci</option>
-            <option value="5">Michelangelo</option>
+            <?php
+                for($i = 0; $i < sizeof($artists); $i++){
+                    echo "<option value='".($i+1)."'>".$artists[$i]."</option>";
+                }
+            ?>
         </select>
 
         <select class="form-control" id="museum">
             <option value="0" selected disabled>Museum</option>
-            <option value="1">The Acropolis Museum</option>
-            <option value="2">Le Louvre Museum</option>
-            <option value="3">State Hermitage Museum</option>
-            <option value="4">The British Museum</option>
-            <option value="5">The Prado</option>
+            <?php
+                for($i = 0; $i < sizeof($museums); $i++){
+                    echo "<option value='".($i+1)."'>".$museums[$i]."</option>";
+                }
+            ?>
         </select>
     </div>
 
