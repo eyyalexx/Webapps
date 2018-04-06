@@ -4,7 +4,7 @@
 include('../DbConnect.php');
 
 // get the records from the database
-if ($result = $mysqli->query("SELECT * FROM Artists"))
+if ($result = $conn->query("SELECT * FROM Artists"))
 {
 // display records if there are records to display
 if ($result->num_rows > 0)
@@ -37,10 +37,10 @@ echo "No results to display!";
 // show an error if there is an issue with the database query
 else
 {
-echo "Error: " . $mysqli->error;
+echo "Error: " . $conn->error;
 }
 
 // close database connection
-$mysqli->close();
+$conn->close();
 
 ?>
