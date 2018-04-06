@@ -4,7 +4,7 @@
 function getArtWorkNames(){
     include 'DbConnect.php';
 
-    $sql = "SELECT Name FROM ArtWork";
+    $sql = "SELECT Name FROM ArtWork ORDER BY Name ASC";
     $result = $conn->query($sql);
 
     $data = [];
@@ -25,7 +25,7 @@ function getArtWorkNames(){
 function getArtistNames(){
     include 'DbConnect.php';
 
-    $sql = "SELECT Name FROM Artists";
+    $sql = "SELECT Name FROM Artists ORDER BY Name ASC";
     $result = $conn->query($sql);
 
     $data = [];
@@ -46,7 +46,7 @@ function getArtistNames(){
 function getMuseumNames(){
     include 'DbConnect.php';
 
-    $sql = "SELECT Name FROM Museums";
+    $sql = "SELECT Name FROM Museums ORDER BY Name ASC";
     $result = $conn->query($sql);
 
     $data = [];

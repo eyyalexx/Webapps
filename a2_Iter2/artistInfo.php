@@ -1,6 +1,6 @@
 <?php 
 include 'DbConnect.php';
-$sql = "SELECT * FROM Artists";
+$sql = "SELECT * FROM Artists ORDER BY Name ASC";
     $result = $conn->query($sql);
 
     $data = [];

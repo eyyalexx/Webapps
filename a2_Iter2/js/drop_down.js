@@ -9,7 +9,7 @@ $.ajax({
         dataType: 'json',
         success: function (data) { 
                 artistInfo = data;
-                console.log("HH"+data);
+
         },
         error: function(e) {
             console.log(e.message);
@@ -30,11 +30,11 @@ function more_artist_info() {
 
     $('.home').fadeOut('fast');
     $("#image").html('<img height="50%" width="50%" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
-    $("#info").html("<p>Birth: " + artistInfo[artistVal].birth + "</p>\
+    /*$("#info").html("<p>Birth: " + artistInfo[artistVal].birth + "</p>\
 						<p>Death: "+ artistInfo[artistVal].death + "</p>\
 						<p>Place of living: "+ artistInfo[artistVal].living + "</p>\
 						<p>Generes: "+ artistInfo[artistVal].genres + "</p>\
-                        <p>Famous: "+ artistInfo[artistVal].famous + "</p>");
+                        <p>Famous: "+ artistInfo[artistVal].famous + "</p>");*/
 }
 
 function more_artwork_info(){
@@ -105,9 +105,10 @@ $(document).ready(function () {
 
         $('.home').fadeOut('fast');
         $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
-        /*$("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].name + "</a></p>\
-                            <p>Brief Description: "+ artistInfo[artistVal].description + "</p>");*/
-        $("#info").html(artistInfo);
+        $("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].Name + "</a></p>\
+                            <p>Brief Description: "+ artistInfo[artistVal].Description + "</p>");
+        
+	   
 
     });
 
