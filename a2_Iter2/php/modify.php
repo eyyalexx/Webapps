@@ -64,19 +64,14 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-    if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
-        $error = 'ERROR: Please fill in all required fields!';
-        renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = $Name")) {
+        $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+        $stmt->execute();
+        $stmt->close();
     } else {
-        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
-            $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
-            $stmt->execute();
-            $stmt->close();
-        } else {
-            echo "ERROR: could not prepare SQL statement.";
-        }
-        header("Location: maintain.php");
+        echo "ERROR: could not prepare SQL statement.";
     }
+    header("Location: maintain.php");
 }
 
 
@@ -94,23 +89,14 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-
-
-    if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
-        $error = 'ERROR: Please fill in all required fields!';
-        renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+    if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+        $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+        $stmt->execute();
+        $stmt->close();
     } else {
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
-            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-            $stmt->execute();
-            $stmt->close();
-        }
-        else {
-            echo "ERROR: Could not prepare SQL statement.";
-        }
-    header("Location: maintain.php");
+        echo "ERROR: Could not prepare SQL statement.";
     }
-
+    header("Location: maintain.php");
 } else {
     renderForm();
 }
