@@ -71,6 +71,11 @@ $(document).ready(function () {
         
     });
 
+    $("#manage-dialog").dialog({
+        autoOpen: false
+        
+    });
+
    
 
     //When changes made to artists dropdown menu
@@ -149,6 +154,14 @@ $(document).ready(function () {
             position: { my: "right top", at: "right top", of: window }
         });
         $("#search-dialog").dialog("open");
+    });
+
+
+    $("#manage_button").on('click', function(event){
+        $("#manage-dialog").dialog({
+            position: { my: "right top", at: "right top", of: window }
+        });
+        $("#manage-dialog").dialog("open");
     });
     
 
