@@ -72,7 +72,6 @@
 
 EDIT RECORD
 
-*/
 // if the 'id' variable is set in the URL, we know that we need to edit a record
 if (isset($_GET['id']))
 {
@@ -157,12 +156,12 @@ header("Location: view.php");
 }
 }
 
-
+*/
 
 
 //NEW RECORD
 
-else {
+//else {
 
 if (isset($_POST['submit'])) {
     $Name = htmlentities($_POST['Name'], ENT_QUOTES);
@@ -199,7 +198,7 @@ else
 {
 renderForm();
 }
-}
+//}
 
 // close the conn connection
 $conn->close();
