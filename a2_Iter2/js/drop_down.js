@@ -51,6 +51,11 @@ $(document).ready(function () {
         
     });
 
+    $("#search-dialog").dialog({
+        autoOpen: false
+        
+    });
+
    
 
     //When changes made to artists dropdown menu
@@ -114,6 +119,13 @@ $(document).ready(function () {
     });
     $("#shipping").change(function () {
         updatePrice();
+    });
+
+    $("#searchBtn").on('click', function(event){
+        $("#search-dialog").dialog({
+            position: { my: "right top", at: "right top", of: window }
+        });
+        $("#search-dialog").dialog("open");
     });
     
 
