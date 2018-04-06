@@ -243,9 +243,9 @@ $(document).ready(function () {
         if(artworkVal != null){
             //for default values
             var price = artworkInfo[artworkVal].Price;
-            var tax = price * 0.13;
+            var tax = parseInt(price) * 0.13;
             var shipping = 10;
-            var total = price+tax+shipping;
+            var total = parseInt(price)+tax+shipping;
 
             $("#dialog").dialog("open");
             $("#ptitle").text(artworkInfo[artworkVal].Name);
@@ -267,14 +267,14 @@ $(document).ready(function () {
             var quantity = $("#quantity").val();
             
             var price = artworkInfo[artworkVal].Price*quantity;
-            var tax = price * 0.13;
+            var tax = parseInt(price) * 0.13;
             if(shippingMethod == 1)
                 var shipping = 10;
             else{
                 var shipping = 20;
             }
 
-            var total = price+tax+shipping;
+            var total = parseInt(price)+tax+shipping;
 
             $("#price").text("$"+price);
             $("#tax").text("$"+tax);
