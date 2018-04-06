@@ -237,8 +237,29 @@ $(document).ready(function () {
         console.log(museumInfo);
     });
 
+    $("#cart").on('click', function(event){
+        var artworkVal = $("#artwork").val()-1;
+
+        if(artworkVal != null){
+            //for default values
+            var price = artworkInfo[artworkVal].Price;
+            var tax = price * 0.13;
+            var shipping = 10;
+
+            $("#dialog").dialog("open");
+            $("#ptitle").text(artworkInfo[artworkVal].Name);
+            $("#price").text("$"+price);
+            $("#tax").text("$"+tax);
+            $("#shipPrice").text("$"+shipping);
+            $("#total").text("$"+(price+tax+shipping));
+
+        }else{
+            $("#dialog2").dialog("open");
+        }
+    });
+
     function updatePrice(){
-        var artworkVal = $("#artwork").val();
+        var artworkVal = $("#artwork").val()-1;
         if(artworkVal != null){
 
             var shippingMethod = $("#shipping").val();
@@ -305,26 +326,7 @@ $(document).ready(function () {
     });
     
 
-    $("#cart").on('click', function(event){
-        var artworkVal = $("#artwork").val();
-
-        if(artworkVal != null){
-            //for default values
-            var price = artworkInfo[artworkVal].Price;
-            var tax = price * 0.13;
-            var shipping = 10;
-
-            $("#dialog").dialog("open");
-            $("#ptitle").text(artInfo[artworkVal].name);
-            $("#price").text("$"+price);
-            $("#tax").text("$"+tax);
-            $("#shipPrice").text("$"+shipping);
-            $("#total").text("$"+(price+tax+shipping));
-
-        }else{
-            $("#dialog2").dialog("open");
-        }
-    });
+    
 
 });
 
