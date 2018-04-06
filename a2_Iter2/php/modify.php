@@ -63,23 +63,19 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-// check that firstname and lastname are both not empty
-if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
-    $error = 'ERROR: Please fill in all required fields!';
-    renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-} else {
-    //$stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")
-    if ($stmt = $conn->prepare("UPDATE Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
-        $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-        $stmt->execute();
-        $stmt->close();
+    if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
+        $error = 'ERROR: Please fill in all required fields!';
+        renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     } else {
-        echo "ERROR: could not prepare SQL statement.";
+        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ?")) {
+            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+            $stmt->execute();
+            $stmt->close();
+        } else {
+            echo "ERROR: could not prepare SQL statement.";
+        }
+        header("Location: maintain.php");
     }
-    header("Location: maintain.php");
-} else {
-    echo "Error!";
-}
 }/* else {
 
     // get the recod from the database
