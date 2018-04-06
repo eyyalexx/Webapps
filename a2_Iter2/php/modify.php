@@ -72,13 +72,14 @@
 //else {
 
 if (isset($_POST['submit'])) {
-    $Name = htmlentities($_POST['Name'], ENT_QUOTES);
+    echo "hello?!";
+    /*$Name = htmlentities($_POST['Name'], ENT_QUOTES);
     $Description = htmlentities($_POST['Description'], ENT_QUOTES);
     $Birth = htmlentities($_POST['Birth'], ENT_QUOTES);
     $Death = htmlentities($_POST['Death'], ENT_QUOTES);
     $Living = htmlentities($_POST['Living'], ENT_QUOTES);
     $Genres = htmlentities($_POST['Genres'], ENT_QUOTES);
-    $Famous = htmlentities($_POST['Famous'], ENT_QUOTES);
+    $Famous = htmlentities($_POST['Famous'], ENT_QUOTES);*/
 
 
 
