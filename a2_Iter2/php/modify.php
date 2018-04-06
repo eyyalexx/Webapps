@@ -50,7 +50,7 @@
 }
 
 
-
+if (isset($_GET['Name'])) {
 //EDIT RECORD
 
 // if the form's submit button is clicked, we need to process the form
@@ -73,6 +73,7 @@ if (isset($_POST['submit'])) {
     }
     header("Location: maintain.php");
 }
+} else {
 
 
 //NEW RECORD
@@ -97,6 +98,7 @@ if (isset($_POST['submit'])) {
     header("Location: maintain.php");
 } else {
     renderForm();
+}
 }
 
 $conn->close();
