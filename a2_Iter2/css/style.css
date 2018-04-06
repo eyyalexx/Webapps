@@ -24,3 +24,7 @@
 .thumbnail {
     height: 250px; 
 }
+
+iframe{
+    overflow:hidden;
+}
