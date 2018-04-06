@@ -95,7 +95,7 @@ function more_artwork_info(){
             console.log(e.message);
         }
     });
-    $("#info").html("<p>Date: "+artworkInfo[artworkVal].Date+"</p>\
+    $("#info").html("<p>Date: "+artworkInfo[artworkVal].DateCreated+"</p>\
                     <p>Type: "+artworkInfo[artworkVal].Type+"</p>\
                     <p>Dimensions: "+artworkInfo[artworkVal].Dimensions+"</p>\
                     <p>Location: "+artworkInfo[artworkVal].Location+"</p>\
@@ -130,7 +130,7 @@ function more_museum_info(){
                     <p>Location and adress: "+museumInfo[museumVal].Location+"</p>\
                     <p>People involved: "+museumInfo[museumVal].People+"</p>\
                     <p>History: "+museumInfo[museumVal].History+"</p>\
-                    <p>Artworks: "+museumInfo[museumVal].Artworks+"</p>");
+                    <p>Artworks: "+museumInfo[museumVal].ArtWorks+"</p>");
 }
 
 $(document).ready(function () {
