@@ -1,7 +1,7 @@
 
 <?php
 // connect to the database
-include('connect-db.php');
+include('../DbConnect.php');
 
 // get the records from the database
 if ($result = $mysqli->query("SELECT * FROM Artists"))

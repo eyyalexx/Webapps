@@ -13,7 +13,6 @@
 </head>
 <body>
     <?php
-    include('../DbSelect.php');
     include('view.php');
     ?>
 
