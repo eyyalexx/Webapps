@@ -80,23 +80,8 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-
-
-    if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
-        $error = 'ERROR: Please fill in all required fields!';
-        renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    }
-    else {
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES ($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous)")) {
-            //$stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-            $stmt->execute();
-            $stmt->close();
-        }
-        else {
-            echo "ERROR: Could not prepare SQL statement.";
-        }
-    header("Location: maintain.php");
-    }
+    $conn->query("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES ($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous)");
+    
 
 } else {
     renderForm();
