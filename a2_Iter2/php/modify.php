@@ -49,7 +49,7 @@
 
 }
 
-
+/*
 if (isset($_GET['Name'])) {
 //EDIT RECORD
 $Name2 = $_GET['Name'];
@@ -91,9 +91,86 @@ if (isset($_POST['submit'])) {
 
     $stmt->close();
     }
-    */
 
 } else {
+*/
+
+////////////////////////////////////////////////////////////////////
+
+
+//EDIT RECORD
+
+// if the 'id' variable is set in the URL, we know that we need to edit a record
+if (isset($_GET['Name'])) {
+
+if (isset($_POST['submit']))
+{
+
+// get variables from the URL/form
+$id = $_POST['Name'];
+$Name = $_POST['Name'];
+$Description = $_POST['Description'];
+    $Birth = $_POST['Birth'];
+$Death = $_POST['Death'];
+$Living = $_POST['Living'];
+$Genres = $_POST['Genres'];
+$Famous = $_POST['Famous'];
+
+// if everything is fine, update the record in the database
+if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name=?"))
+{
+$stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $id);
+$stmt->execute();
+$stmt->close();
+}
+// show an error message if the query has an error
+else
+{
+echo "ERROR: could not prepare SQL statement.";
+}
+
+// redirect the user once the form is updated
+header("Location: maintain.php");
+
+}
+// if the form hasn't been submitted yet, get the info from the database and show the form
+else
+{
+// get 'id' from URL
+$id = $_GET['Name'];
+
+// get the recod from the database
+if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?"))
+{
+$stmt->bind_param("s", $id);
+$stmt->execute();
+
+$stmt->bind_result($id, $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+$stmt->fetch();
+
+// show the form
+renderForm($Name, $Description, NULL, $id);
+
+$stmt->close();
+}
+// show an error if the query has an error
+else
+{
+echo "Error: could not prepare SQL statement";
+}
+
+// if the 'id' value is not valid, redirect the user back to the view.php page
+else
+{
+header("Location: maintain.php");
+}
+}
+}
+
+
+
+
+
 
 
 //NEW RECORD
@@ -119,7 +196,7 @@ if (isset($_POST['submit'])) {
 } else {
     renderForm();
 }
-}
+
 
 $conn->close();
 ?>
