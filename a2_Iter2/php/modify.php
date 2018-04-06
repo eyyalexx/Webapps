@@ -66,8 +66,8 @@ if (isset($_POST['submit'])) {
     $Genres = $_POST['Genres'];
     $Famous = $_POST['Famous'];
 
-    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = $Name")) {
-        $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+    if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
+        $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
         $stmt->execute();
         $stmt->close();
     } else {
