@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/profile.css">
     <script src="js/drop_down.js"></script>
-    <script src="js/artist_info.js"></script>
+
     <script src="js/art_info.js"></script>
     <script src="js/mus_info.js"></script>
 </head>

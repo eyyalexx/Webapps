@@ -1,3 +1,21 @@
+var artistInfo = null;
+var artworkInfo = null;
+var museumInfo = null;
+
+function getInfo(){
+    
+    $.ajax({ 
+        type: 'GET', 
+        url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/artistInfo.php', 
+        dataType: 'json',
+        success: function (data) { 
+                artistInfo = data;
+        }
+    });
+}
+getInfo();
+
+
 function closeDialog(){
     $("#dialog").dialog("close");
 }
@@ -86,8 +104,9 @@ $(document).ready(function () {
 
         $('.home').fadeOut('fast');
         $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
-        $("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].name + "</a></p>\
-                            <p>Brief Description: "+ artistInfo[artistVal].description + "</p>");
+        /*$("#info").html("<p>Name: <a id='artist_link' onClick='more_artist_info(); return false;' href='#'>" + artistInfo[artistVal].name + "</a></p>\
+                            <p>Brief Description: "+ artistInfo[artistVal].description + "</p>");*/
+        $("#info").html(artistInfo);
 
     });
 
