@@ -72,7 +72,7 @@ if (isset($_GET['Name'])) {
 
         // if everything is fine, update the record in the database
         if ($stmt = $conn->prepare("UPDATE ArtWork SET Name = ?, Description = ?, Type = ?, Dimensions = ?, Location = ?, Artist = ?, Price = ?, Genre = ?, DateCreated = ? WHERE Name=?")) {
-            $stmt->bind_param("ssssssss", $Name, $Description, $Type, $Dimensions, $Location, $Artist, $Price, $Genre, $DateCreated, $id);
+            $stmt->bind_param("ssssssssss", $Name, $Description, $Type, $Dimensions, $Location, $Artist, $Price, $Genre, $DateCreated, $id);
             $stmt->execute();
             $stmt->close();
         } else {
@@ -111,7 +111,7 @@ if (isset($_GET['Name'])) {
         $Genre = $_POST['Genre'];
         $DateCreated = $_POST['DateCreated'];
 
-        if ($stmt = $conn->prepare("INSERT ArtWork (Name, Description, Type, Dimensions, Location, Artist, Price, Genre, DateCreated) VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?)")) {
+        if ($stmt = $conn->prepare("INSERT ArtWork (Name, Description, Type, Dimensions, Location, Artist, Price, Genre, DateCreated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
             $stmt->bind_param("sssssssss", $Name, $Description, $Type, $Dimensions, $Location, $Artist, $Price, $Genre, $DateCreated);
             $stmt->execute();
             $stmt->close();
