@@ -275,6 +275,25 @@ $(document).ready(function () {
         $("#search-dialog").dialog("open");
     });
 
+    $("#search-submit").on('click', function(event){
+        var searchText = $("#search-input").val();
+
+        $.ajax({ 
+            type: 'POST', 
+            url: 'http://www2.scs.ryerson.ca/~tssaini/Webapps/a2_Iter2/search.php', 
+            dataType: 'json',
+            data: {text: searchText},
+            success: function (data) { 
+                console.log(data);
+            },
+            error: function(e) {
+                console.log(e.message);
+            }
+        });
+
+        $("#search-dialog").dialog("close");
+    });
+
 
     $("#manage_button").on('click', function(event){
         $("#manage-dialog").dialog({
