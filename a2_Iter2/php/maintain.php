@@ -14,11 +14,16 @@
 <body>
     <?php
     include('view_artists.php');
+    echo "<a href='modify_artist.php'>Add New Artist Record</a>";
     include('view_artwork.php');
+    echo "<a href='modify_artworks.php'>Add New ArtWorks Record</a>";
     include('view_museums.php');
+    echo "<a href='modify_museums.php'>Add New Museums Record</a>"";
     ?>
 
-    <a href="modify.php">Add New Record</a>
+    
+    
+    
 
     
     
