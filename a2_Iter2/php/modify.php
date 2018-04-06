@@ -7,13 +7,13 @@
 <html>
     <head>
         <title>
-            <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
+            <?php if ($Name != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
 <body>
     <h1>
-        <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
+        <?php if ($Name != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
     </h1>
 
     <?php
@@ -27,11 +27,11 @@
     <div>
 
         <?php
-        if ($id != '') {
+        if ($Name != '') {
         ?>
 
-    <input type="hidden" name="id" value="<?php echo $id; ?>" />
-    <p>ID: <?php echo $id; ?></p>
+    <input type="hidden" name="id" value="<?php echo $Name; ?>" />
+    <p>NAME: <?php echo $Name; ?></p>
 <?php } ?>
 
     Name: <input type="text" name="Name"
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 // check that firstname and lastname are both not empty
 if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
     $error = 'ERROR: Please fill in all required fields!';
-    renderForm($firstname, $lastname, $error, $id);
+    renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
 }
 else
 {
