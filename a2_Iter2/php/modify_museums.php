@@ -63,7 +63,7 @@ if (isset($_GET['Name'])) {
         $Description = $_POST['Description'];
 
         // if everything is fine, update the record in the database
-        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Established = ?, Location = ?, People = ?, History = ?, ArtWorks = ?, Description = ? WHERE Name=?")) {
+        if ($stmt = $conn->prepare("UPDATE Museums SET Name = ?, Established = ?, Location = ?, People = ?, History = ?, ArtWorks = ?, Description = ? WHERE Name=?")) {
             $stmt->bind_param("ssssssss", $Name, $Established, $Location, $People, $History, $ArtWorks, $Description, $id);
             $stmt->execute();
             $stmt->close();
@@ -73,7 +73,7 @@ if (isset($_GET['Name'])) {
         header("Location: maintain.php");
     } else {
         $id = $_GET['Name'];
-        if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?")) {
+        if($stmt = $conn->prepare("SELECT * FROM Museums WHERE Name=?")) {
             $stmt->bind_param("s", $id);
             $stmt->execute();
 
@@ -101,7 +101,7 @@ if (isset($_GET['Name'])) {
         $ArtWorks = $_POST['ArtWorks'];
         $Description = $_POST['Description'];
 
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Established, Location, People, History, ArtWorks, Description) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
+        if ($stmt = $conn->prepare("INSERT Museums (Name, Established, Location, People, History, ArtWorks, Description) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
             $stmt->bind_param("sssssss", $Name, $Established, $Location, $People, $History, $ArtWorks, $Description);
             $stmt->execute();
             $stmt->close();

@@ -111,7 +111,7 @@ if (isset($_GET['Name'])) {
         $Genre = $_POST['Genre'];
         $DateCreated = $_POST['DateCreated'];
 
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Type, Dimensions, Location, Artist, Price, Genre, DateCreated) VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?)")) {
+        if ($stmt = $conn->prepare("INSERT ArtWork (Name, Description, Type, Dimensions, Location, Artist, Price, Genre, DateCreated) VALUES (?, ?, ?, ?, ?, ?, ?, ? , ?)")) {
             $stmt->bind_param("sssssssss", $Name, $Description, $Type, $Dimensions, $Location, $Artist, $Price, $Genre, $DateCreated);
             $stmt->execute();
             $stmt->close();
