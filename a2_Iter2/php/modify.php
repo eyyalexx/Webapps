@@ -87,8 +87,8 @@ if (isset($_POST['submit'])) {
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     }
     else {
-        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?, ?, ?, ?, ?, ?)")) {
-            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+        if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES ($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous)")) {
+            //$stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
             $stmt->close();
         }
