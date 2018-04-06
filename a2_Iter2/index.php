@@ -13,8 +13,8 @@ include('pages/headers/header_main.php');
             </div>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="pages/about.html">About us</a></li>
-                <li><a href="pages/blogs.html">Blogs</a></li>
+                <li><a href="pages/about.php">About us</a></li>
+                <li><a href="pages/blogs.php">Blogs</a></li>
             </ul>
 
             <button type="button" class="btn btn-default btn-sm pull-right" id="cart">
