@@ -16,6 +16,12 @@
         <?php if ($id != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
     </h1>
 
+    <?php
+    if ($error != '') {
+        echo "<div>" . $error . "</div>";
+    }
+    ?>
+
     <form action="" method="post">
 
     <div>
@@ -79,7 +85,8 @@ if (isset($_POST['submit'])) {
     if ($Name == '' || $Description == '' || $Birth == '' || $Death == '' || $Living == '' || $Genres == '' || $Famous == '') {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
-    } /*else {
+    }/*
+    else {
         if ($stmt = $conn->prepare("INSERT Artists (Name, Description, Birth, Death, Living, Genres, Famous) VALUES (?, ?)")) {
             $stmt->bind_param("ss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
             $stmt->execute();
