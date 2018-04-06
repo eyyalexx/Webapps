@@ -138,7 +138,7 @@ $(document).ready(function () {
             dataType: 'json',
             data: {imageID: artistInfo[artistVal].ImageID},
             success: function (data) { 
-                $("#image").html('<img height="150px" width="150px" src="images/artists/' + artistVal + '.jpg" alt="Mountain View"/>');
+                $("#image").html('<img height="150px" width="150px" src="'+data[0].Link+'" alt="Mountain View"/>');
             },
             error: function(e) {
                 console.log(e.message);
