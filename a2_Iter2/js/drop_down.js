@@ -244,7 +244,7 @@ $(document).ready(function () {
             var shippingMethod = $("#shipping").val();
             var quantity = $("#quantity").val();
             
-            var price = artInfo[artworkVal].price*quantity;
+            var price = artworkInfo[artworkVal].Price*quantity;
             var tax = price * 0.13;
             if(shippingMethod == 1)
                 var shipping = 10;
@@ -310,7 +310,7 @@ $(document).ready(function () {
 
         if(artworkVal != null){
             //for default values
-            var price = artInfo[artworkVal].price;
+            var price = artworkInfo[artworkVal].Price;
             var tax = price * 0.13;
             var shipping = 10;
 
