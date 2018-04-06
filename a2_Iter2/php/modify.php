@@ -68,7 +68,7 @@ if (isset($_POST['submit'])) {
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     } else {
         if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
-            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+            $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
             $stmt->execute();
             $stmt->close();
         } else {
@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
         }
         header("Location: maintain.php");
     }
-} else {
+} /*else {
 
     // get the recod from the database
     if($stmt = $conn->prepare("SELECT * FROM Artists WHERE Name=?")) {
@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
     } else {
         header("Location: maintain.php");
     }
-}
+}*/
 
 
 //NEW RECORD
