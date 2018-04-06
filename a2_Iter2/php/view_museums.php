@@ -26,7 +26,7 @@ echo "<td>" . $row->People . "</td>";
 echo "<td>" . $row->History . "</td>";
 echo "<td>" . $row->ArtWorks . "</td>";
 echo "<td>" . $row->Description . "</td>";
-echo "<td><a href='modify.php?Name=" . $row->Name . "'>Edit</a></td>";
+echo "<td><a href='modify_museums.php?Name=" . $row->Name . "'>Edit</a></td>";
 echo "<td><a href='remove_museums.php?Name=" . $row->Name . "'>Delete</a></td>";
 echo "</tr>";
 }

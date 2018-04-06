@@ -20,7 +20,7 @@ echo "<td>" . $row->Death . "</td>";
 echo "<td>" . $row->Living . "</td>";
 echo "<td>" . $row->Genres . "</td>";
 echo "<td>" . $row->Famous . "</td>";
-echo "<td><a href='modify.php?Name=" . $row->Name . "'>Edit</a></td>";
+echo "<td><a href='modify_artist.php?Name=" . $row->Name . "'>Edit</a></td>";
 echo "<td><a href='remove_artist.php?Name=" . $row->Name . "'>Delete</a></td>";
 echo "</tr>";
 }

@@ -22,7 +22,7 @@ echo "<td>" . $row->Artist . "</td>";
 echo "<td>" . $row->Price . "</td>";
 echo "<td>" . $row->Genre . "</td>";
 echo "<td>" . $row->DateCreated . "</td>";
-echo "<td><a href='modify.php?Name=" . $row->Name . "'>Edit</a></td>";
+echo "<td><a href='modify_artworks.php?Name=" . $row->Name . "'>Edit</a></td>";
 echo "<td><a href='remove_artworks.php?Name=" . $row->Name . "'>Delete</a></td>";
 echo "</tr>";
 }
