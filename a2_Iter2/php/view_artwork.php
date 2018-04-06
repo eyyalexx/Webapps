@@ -28,7 +28,7 @@ echo "<td>" . $row->Artist . "</td>";
 echo "<td>" . $row->Price . "</td>";
 echo "<td>" . $row->Genre . "</td>";
 echo "<td>" . $row->DateCreated . "</td>";
-echo "<td><a href='records.php?id=" . $row->id . "'>Edit</a></td>";
+echo "<td><a href='modify.php?id=" . $row->id . "'>Edit</a></td>";
 echo "<td><a href='delete.php?id=" . $row->id . "'>Delete</a></td>";
 echo "</tr>";
 }
