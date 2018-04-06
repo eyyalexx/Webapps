@@ -7,61 +7,43 @@
 <html>
     <head>
         <title>
-            <?php if ($Name != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
+            Modify
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     </head>
 <body>
-    <h1>
-        <?php if ($Name != '') { echo "Edit Record"; } else { echo "New Record"; } ?>
-    </h1>
-
-    <?php
-    if ($error != '') {
-        echo "<div>" . $error . "</div>";
-    }
-    ?>
 
     <form action="" method="post">
 
-    <div>
+        <div>
+            Name: <input type="text" name="Name"
+            value="<?php echo $Name; ?>"/><br/>
 
-        <?php
-        if ($Name != '') {
-        ?>
+            Description: <input type="text" name="Description"
+            value="<?php echo $Description; ?>"/><br/>
 
-    <input type="hidden" name="id" value="<?php echo $Name; ?>" />
-    <p>NAME: <?php echo $Name; ?></p>
-<?php } ?>
+            Birth: <input type="text" name="Birth"
+            value="<?php echo $Birth; ?>"/><br/>
 
-    Name: <input type="text" name="Name"
-    value="<?php echo $Name; ?>"/><br/>
+            Death: <input type="text" name="Death"
+            value="<?php echo $Death; ?>"/><br/>
 
-    Description: <input type="text" name="Description"
-    value="<?php echo $Description; ?>"/><br/>
+            Living: <input type="text" name="Living"
+            value="<?php echo $Living; ?>"/><br/>
 
-    Birth: <input type="text" name="Birth"
-    value="<?php echo $Birth; ?>"/><br/>
+            Genres: <input type="text" name="Genres"
+            value="<?php echo $Genres; ?>"/><br/>
 
-    Death: <input type="text" name="Death"
-    value="<?php echo $Death; ?>"/><br/>
+            Famous: <input type="text" name="Famous"
+            value="<?php echo $Famous; ?>"/><br/>
 
-    Living: <input type="text" name="Living"
-    value="<?php echo $Living; ?>"/><br/>
+            <p>* required</p>
 
-    Genres: <input type="text" name="Genres"
-    value="<?php echo $Genres; ?>"/><br/>
-
-    Famous: <input type="text" name="Famous"
-    value="<?php echo $Famous; ?>"/><br/>
-
-    <p>* required</p>
-
-    <input type="submit" name="submit" value="Submit" />
-    </div>
+            <input type="submit" name="submit" value="Submit" />
+        </div>
     </form>
-    </body>
-    </html>
+</body>
+</html>
 
     <?php
     }
