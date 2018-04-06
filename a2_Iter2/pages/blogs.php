@@ -9,11 +9,11 @@ include('pages/headers/header_main.php');
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="../index.html">Art Store</a>
+                <a class="navbar-brand" href="../index.php">Art Store</a>
             </div>
             <ul class="nav navbar-nav">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About us</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="about.php">About us</a></li>
                 <li class="active"><a href="#">Blogs</a></li>
             </ul>
 
