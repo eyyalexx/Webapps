@@ -55,6 +55,7 @@
 
 // if the form's submit button is clicked, we need to process the form
 if (isset($_POST['submit'])) {
+    echo "<script type='text/javascript'>alert('EDIT');</script>";
     $Name = $_POST['Name'];
     $Description = $_POST['Description'];
     $Birth = $_POST['Birth'];
@@ -67,8 +68,8 @@ if (isset($_POST['submit'])) {
         $error = 'ERROR: Please fill in all required fields!';
         renderForm($Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
     } else {
-        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = $Name")) {
-            $stmt->bind_param("sssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous);
+        if ($stmt = $conn->prepare("UPDATE Artists SET Name = ?, Description = ?, Birth = ?, Death = ?, Living = ?, Genres = ?, Famous = ? WHERE Name = ?")) {
+            $stmt->bind_param("ssssssss", $Name, $Description, $Birth, $Death, $Living, $Genres, $Famous, $Name);
             $stmt->execute();
             $stmt->close();
         } else {
@@ -84,6 +85,7 @@ if (isset($_POST['submit'])) {
 //else {
 
 if (isset($_POST['submit'])) {
+    echo "<script type='text/javascript'>alert('NEW');</script>";
     $Name = $_POST['Name'];
     $Description = $_POST['Description'];
     $Birth = $_POST['Birth'];
