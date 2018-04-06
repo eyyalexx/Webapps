@@ -240,6 +240,9 @@ $(document).ready(function () {
     $("#cart").on('click', function(event){
         var artworkVal = $("#artwork").val()-1;
 
+        $("#quantity").val(1);
+        $("#shipping").val(1);
+
         if(artworkVal != null){
             //for default values
             var price = artworkInfo[artworkVal].Price;
