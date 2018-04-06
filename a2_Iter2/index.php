@@ -138,6 +138,20 @@ include('DbSelect.php');
 						
 					</div>
 				</div>
+            </div>
+
+            <div class="row">
+				<div class="col-md-6">
+					<div id="" class="thumbnail">
+					
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div id="searchResults" class="thumbnail">
+						
+					</div>
+				</div>
 			</div>
     </div>
 
