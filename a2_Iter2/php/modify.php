@@ -153,11 +153,6 @@ renderForm($Name, $Description, NULL, $id);
 
 $stmt->close();
 }
-// show an error if the query has an error
-else
-{
-echo "Error: could not prepare SQL statement";
-}
 
 // if the 'id' value is not valid, redirect the user back to the view.php page
 else
