@@ -27,14 +27,16 @@ include('../pages/headers/header_main.php');
 
     <?php
     include('view_artists.php');
-    echo "<br>";
     echo "<a href='modify_artist.php'>Add New Artist Record</a>";
+    echo "<br>";
+
     include('view_artwork.php');
-    echo "<br>";
     echo "<a href='modify_artworks.php'>Add New ArtWorks Record</a>";
-    include('view_museums.php');
     echo "<br>";
+    
+    include('view_museums.php');
     echo "<a href='modify_museums.php'>Add New Museums Record</a>";
+    echo "<br>";
     ?>
 
     
