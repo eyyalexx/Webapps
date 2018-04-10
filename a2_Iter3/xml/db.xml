@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt.xsl"?>
+<db>
+    <Artists>
+        <Artist ID="1">
+            <Name>Vincent Van Gogh</Name>
+            <Description>Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art.</Description>
+            <Birth>30 March 1853</Birth>
+            <Death>29 July 1890</Death>
+            <Living>France</Living>
+            <Genres>Post-Impressionism</Genres>
+            <Famous>Sunflowers (F.458), repetition of the 4th version (yellow background)</Famous>
+        </Artist>
+        <Artist ID="2">
+            <Name>Pablo Picasso</Name>
+            <Description>Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France</Description>
+            <Birth>25 October 1881</Birth>
+            <Death>8 April 1973</Death>
+            <Living>France</Living>
+            <Genres>Cubism, Surrealism</Genres>
+            <Famous>La Vie (1903)</Famous>
+        </Artist>
+        <Artist ID="3">
+            <Name>Claude Monet</Name>
+            <Description>Oscar-Claude Monet was a founder of French Impressionist painting, and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein-air landscape painting.</Description>
+            <Birth>14 November 1840</Birth>
+            <Death>5 December 1926</Death>
+            <Living>France</Living>
+            <Genres>Impressionism</Genres>
+            <Famous>Rouen Cathedral series</Famous>
+        </Artist>
+        <Artist ID="4">
+            <Name>Leonardo da Vinci</Name>
+            <Description>Leonardo di ser Piero da Vinci more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath</Description>
+            <Birth>15 April 1452</Birth>
+            <Death>2 May 1519</Death>
+            <Living>Italy</Living>
+            <Genres>High Renaissance</Genres>
+            <Famous>The Last Judgment</Famous>
+        </Artist>
+        <Artist ID="5">
+            <Name>Michelangelo</Name>
+            <Description>Michelangelo di Lodovico Buonarroti Simoni or more commonly known by his first name Michelangelo was an Italian sculptor, painter, architect and poet of the High Renaissance.</Description>
+            <Birth>6 March 1475</Birth>
+            <Death>18 February 1564</Death>
+            <Living>Italy</Living>
+            <Genres>High Renaissance</Genres>
+            <Famous>The Last Judgment</Famous>
+        </Artist>
+    </Artists>
+    <ArtWorks>
+        <ArtWork ID="1">
+            <Name>The Starry Night</Name>
+            <Description>The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh.</Description>
+            <Type>Ultramarine, cobalt blue, indian yellow and zinc yellow</Type>
+            <Dimensions>74 cm x 92 cm</Dimensions>
+            <Location>Museum of Modern Art</Location>
+            <Artist>Vincent van Gogh</Artist>
+            <Price>200</Price>
+            <Genre>Landscape painting</Genre>
+            <DateCreated>June 1889</DateCreated>
+        </ArtWork>
+            <ArtWork ID="2">
+            <Name>Mona Lisa</Name>
+            <Description>The Mona Lisa is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci.</Description>
+            <Type>N/A</Type>
+            <Dimensions>3.49 m x 7.77 m</Dimensions>
+            <Location>The Louvre</Location>
+            <Artist>Leonardo da Vinci</Artist>
+            <Price>150</Price>
+            <Genre>Portrait</Genre>
+            <DateCreated>1503</DateCreated>
+        </ArtWork>
+            <ArtWork ID="3">
+            <Name>Guernica</Name>
+            <Description>Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed in June 1937, at his home on Rue des Grands Augustins, in Paris.</Description>
+            <Type>N/A</Type>
+            <Dimensions>3.49 m x 7.77 m</Dimensions>
+            <Location>Museo Nacional Centro de Arte Reina Sofía</Location>
+            <Artist>Pablo Picasso</Artist>
+            <Price>90</Price>
+            <Genre>History painting</Genre>
+            <DateCreated>June 1937</DateCreated>
+        </ArtWork>
+            <ArtWork ID="4">
+            <Name>The Last Supper</Name>
+            <Description>The Last Supper is a late 15th-century mural painting by Leonardo da Vinci housed by the refectory of the Convent of Santa Maria delle Grazie in Milan.</Description>
+            <Type>N/A</Type>
+            <Dimensions>4.6 m x 8.8 m</Dimensions>
+            <Location>Santa Maria delle Grazie</Location>
+            <Artist>Leonardo da Vinci</Artist>
+            <Price>120</Price>
+            <Genre>Mural</Genre>
+            <DateCreated>1495–1498</DateCreated>
+        </ArtWork>
+            <ArtWork ID="5">
+            <Name>Sistine Chapel Ceiling</Name>
+            <Description>The Sistine Chapel ceiling, painted by Michelangelo between 1508 and 1512, is a cornerstone work of High Renaissance art.</Description>
+            <Type>N/A</Type>
+            <Dimensions>40 m x 14 m</Dimensions>
+            <Location>Sistine Chapel</Location>
+            <Artist>Michelangelo</Artist>
+            <Price>21</Price>
+            <Genre>Renaissance</Genre>
+            <DateCreated>1512</DateCreated>
+        </ArtWork>
+    </ArtWorks>
+    <Museums>
+        <Museum ID="1">
+            <Name>The Acropolis Museum</Name>
+            <Established>2009</Established>
+            <Location>Dionysiou Areopagitou 15, Athina 117 42, Greece</Location>
+            <People>Architect: Bernard Tschumi</People>
+            <History>The monuments of the Acropolis have withstood the ravages of past centuries, both of ancient times and those of the Middle Ages. Until the 17th century, foreign travellers visiting the monuments depicted the classical buildings as being intact.</History>
+            <ArtWorks>Artefacts from the Athenian Acropolis, the most significant sanctuary of the ancient city</ArtWorks>
+            <Description>The Acropolis Museum is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens.</Description>
+        </Museum>
+        <Museum ID="2">
+            <Name>Le Louvre Museum</Name>
+            <Established>August 10, 1793</Established>
+            <Location>Rue de Rivoli, 75001 Paris, France</Location>
+            <People>Curator: Marie-Laure de Rochebrune</People>
+            <History>The history of the Louvre begins around 1190 with Philippe Auguste’s decision to erect a fortified enclosure to protect Paris. This was an important gesture in favor of urbanism and a display of the king’s authority just as he was preparing to leave the country to go to war in the Crusades></History>
+            <ArtWorks>Mona Lisa, St. John the Baptist, Virgin of the Rocks</ArtWorks>
+            <Description>The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l'Auxerrois.</Description>
+        </Museum>
+        <Museum ID="3">
+            <Name>State Hermitage Museum</Name>
+            <Established>1764</Established>
+            <Location>Palace Square, 2, Sankt-Peterburg, Russia, 190000</Location>
+            <People>Director: Mikhail Piotrovsky, Founder: Catherine the Great</People>
+            <History>Located between the Neva River and Palace Square, the Hermitage Museum complex consists of five buildings—Winter Palace, Large Hermitage, Small Hermitage, New Hermitage, and the Theatre of Catherine the Great. Each of the buildings was designed by celebrated architects from the 18th and 19th centuries.</History>
+            <ArtWorks>The Return of the Prodigal Son, Judith Giorgione, Flora Rembrandt</ArtWorks>
+            <Description>The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia.</Description>
+        </Museum>
+        <Museum ID="4">
+            <Name>The British Museum</Name>
+            <Established>1753</Established>
+            <Location>Great Russell St, Bloomsbury, London WC1B 3DG, UK</Location>
+            <People>Founder: Sir Hans Sloane</People>
+            <History>Although today principally a museum of cultural art objects and antiquities, the British Museum was founded as a 'universal museum'. Its foundations lie in the will of the Irish-born British physician and naturalist Sir Hans Sloane (1660–1753).</History>
+            <ArtWorks>Rosetta Stone, Study for Adam, Rosetta Stone</ArtWorks>
+            <Description>Its permanent collection numbers some 8 million works, and is among the largest and most comprehensive in existence</Description>
+        </Museum>
+        <Museum ID="5">
+            <Name>The Prado</Name>
+            <Established>1819</Established>
+            <Location>Paseo del Prado, s/n, 28014 Madrid, Spain</Location>
+            <People>Architects: Rafael Moneo, Juan de Villanueva</People>
+            <History>The building that today houses the Museo Nacional del Prado was designed by architect Juan de Villanueva in 1785. It was constructed to house the Natural History Cabinet, by orders of King Charles III.</History>
+            <ArtWorks>The Third of May 1808, Ka maja desnuda, Las Hilanderas</ArtWorks>
+            <Description>The Prado Museum is the main Spanish national art museum, located in central Madrid.</Description>
+        </Museum>
+    </Museums>
+</db>
