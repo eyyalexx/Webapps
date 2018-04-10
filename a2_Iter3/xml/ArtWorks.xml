@@ -2,58 +2,58 @@
 
 <ArtWorks>
     <ArtWork ID="1">
-        <Name></Name>
-        <Description></Description>
-        <Type></Type>
-        <Dimensions></Dimensions>
-        <Location></Location>
-        <Artist></Artist>
-        <Price></Price>
-        <Genre></Genre>
-        <DateCreated></DateCreated>
+        <Name>The Starry Night</Name>
+        <Description>The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh.</Description>
+        <Type>Ultramarine, cobalt blue, indian yellow and zinc yellow</Type>
+        <Dimensions>74 cm x 92 cm</Dimensions>
+        <Location>Museum of Modern Art</Location>
+        <Artist>Vincent van Gogh</Artist>
+        <Price>200</Price>
+        <Genre>Landscape painting</Genre>
+        <DateCreated>June 1889</DateCreated>
     </ArtWork>
         <ArtWork ID="2">
-        <Name></Name>
-        <Description></Description>
-        <Type></Type>
-        <Dimensions></Dimensions>
-        <Location></Location>
-        <Artist></Artist>
-        <Price></Price>
-        <Genre></Genre>
-        <DateCreated></DateCreated>
+        <Name>Mona Lisa</Name>
+        <Description>The Mona Lisa is a half-length portrait painting by the Italian Renaissance artist Leonardo da Vinci.</Description>
+        <Type>N/A</Type>
+        <Dimensions>3.49 m x 7.77 m</Dimensions>
+        <Location>The Louvre</Location>
+        <Artist>Leonardo da Vinci</Artist>
+        <Price>150</Price>
+        <Genre>Portrait</Genre>
+        <DateCreated>1503</DateCreated>
     </ArtWork>
         <ArtWork ID="3">
-        <Name></Name>
-        <Description></Description>
-        <Type></Type>
-        <Dimensions></Dimensions>
-        <Location></Location>
-        <Artist></Artist>
-        <Price></Price>
-        <Genre></Genre>
-        <DateCreated></DateCreated>
+        <Name>Guernica</Name>
+        <Description>Guernica is a mural-sized oil painting on canvas by Spanish artist Pablo Picasso completed in June 1937, at his home on Rue des Grands Augustins, in Paris.</Description>
+        <Type>N/A</Type>
+        <Dimensions>3.49 m x 7.77 m</Dimensions>
+        <Location>Museo Nacional Centro de Arte Reina Sofía</Location>
+        <Artist>Pablo Picasso</Artist>
+        <Price>90</Price>
+        <Genre>History painting</Genre>
+        <DateCreated>June 1937</DateCreated>
     </ArtWork>
         <ArtWork ID="4">
-        <Name></Name>
-        <Description></Description>
-        <Type></Type>
-        <Dimensions></Dimensions>
-        <Location></Location>
-        <Artist></Artist>
-        <Price></Price>
-        <Genre></Genre>
-        <DateCreated></DateCreated>
+        <Name>The Last Supper</Name>
+        <Description>The Last Supper is a late 15th-century mural painting by Leonardo da Vinci housed by the refectory of the Convent of Santa Maria delle Grazie in Milan.</Description>
+        <Type>N/A</Type>
+        <Dimensions>4.6 m x 8.8 m</Dimensions>
+        <Location>Santa Maria delle Grazie</Location>
+        <Artist>Leonardo da Vinci</Artist>
+        <Price>120</Price>
+        <Genre>Mural</Genre>
+        <DateCreated>1495–1498</DateCreated>
     </ArtWork>
         <ArtWork ID="5">
-        <Name></Name>
-        <Description></Description>
-        <Type></Type>
-        <Dimensions></Dimensions>
-        <Location></Location>
-        <Artist></Artist>
-        <Price></Price>
-        <Genre></Genre>
-        <DateCreated></DateCreated>
+        <Name>Sistine Chapel Ceiling</Name>
+        <Description>The Sistine Chapel ceiling, painted by Michelangelo between 1508 and 1512, is a cornerstone work of High Renaissance art.</Description>
+        <Type>N/A</Type>
+        <Dimensions>40 m x 14 m</Dimensions>
+        <Location>Sistine Chapel</Location>
+        <Artist>Michelangelo</Artist>
+        <Price>21</Price>
+        <Genre>Renaissance</Genre>
+        <DateCreated>1512</DateCreated>
     </ArtWork>
 </ArtWorks>
