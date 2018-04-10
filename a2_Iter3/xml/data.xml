@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Artists>
+    <Artist ID="1">
+        <Name>Vincent Van Gogh</Name>
+        <Description>Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art.</Description>
+        <Birth>30 March 1853</Birth>
+        <Death>29 July 1890</Death>
+        <Living>France</Living>
+        <Genres>Post-Impressionism</Genres>
+        <Famous>Sunflowers (F.458), repetition of the 4th version (yellow background)</Famous>
+    </Artist>
+    <Artist ID="2">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+    <Artist ID="3">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+    <Artist ID="4">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+    <Artist ID="5">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+</Artists>
+
+<Museums>
+    <Museum ID="1">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="2">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="3">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="4">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="5">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+</Museums>
+
+
+<ArtWorks>
+    <ArtWork ID="1">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="2">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="3">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="4">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="5">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+</ArtWorks>
