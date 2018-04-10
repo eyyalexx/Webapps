@@ -2,48 +2,48 @@
 
 <Museums>
     <Museum ID="1">
-        <Name></Name>
-        <Established></Established>
-        <Location></Location>
-        <People></People>
-        <History></History>
-        <ArtWorks></ArtWorks>
-        <Description></Description>
+        <Name>The Acropolis Museum</Name>
+        <Established>2009</Established>
+        <Location>Dionysiou Areopagitou 15, Athina 117 42, Greece</Location>
+        <People>Architect: Bernard Tschumi</People>
+        <History>The monuments of the Acropolis have withstood the ravages of past centuries, both of ancient times and those of the Middle Ages. Until the 17th century, foreign travellers visiting the monuments depicted the classical buildings as being intact.</History>
+        <ArtWorks>Artefacts from the Athenian Acropolis, the most significant sanctuary of the ancient city</ArtWorks>
+        <Description>The Acropolis Museum is an archaeological museum focused on the findings of the archaeological site of the Acropolis of Athens.</Description>
     </Museum>
     <Museum ID="2">
-        <Name></Name>
-        <Established></Established>
-        <Location></Location>
-        <People></People>
-        <History></History>
-        <ArtWorks></ArtWorks>
-        <Description></Description>
+        <Name>Le Louvre Museum</Name>
+        <Established>August 10, 1793</Established>
+        <Location>Rue de Rivoli, 75001 Paris, France</Location>
+        <People>Curator: Marie-Laure de Rochebrune</People>
+        <HistoryThe history of the Louvre begins around 1190 with Philippe Auguste’s decision to erect a fortified enclosure to protect Paris. This was an important gesture in favor of urbanism and a display of the king’s authority just as he was preparing to leave the country to go to war in the Crusades></History>
+        <ArtWorks>Mona Lisa, St. John the Baptist, Virgin of the Rocks</ArtWorks>
+        <Description>The Louvre Palace is a former royal palace located on the Right Bank of the Seine in Paris, between the Tuileries Gardens and the church of Saint-Germain l'Auxerrois.</Description>
     </Museum>
     <Museum ID="3">
-        <Name></Name>
-        <Established></Established>
-        <Location></Location>
-        <People></People>
-        <History></History>
-        <ArtWorks></ArtWorks>
-        <Description></Description>
+        <Name>State Hermitage Museum</Name>
+        <Established>1764</Established>
+        <Location>Palace Square, 2, Sankt-Peterburg, Russia, 190000</Location>
+        <People>Director: Mikhail Piotrovsky, Founder: Catherine the Great</People>
+        <History>Located between the Neva River and Palace Square, the Hermitage Museum complex consists of five buildings—Winter Palace, Large Hermitage, Small Hermitage, New Hermitage, and the Theatre of Catherine the Great. Each of the buildings was designed by celebrated architects from the 18th and 19th centuries.</History>
+        <ArtWorks>The Return of the Prodigal Son, Judith Giorgione, Flora Rembrandt</ArtWorks>
+        <Description>The State Hermitage Museum is a museum of art and culture in Saint Petersburg, Russia.</Description>
     </Museum>
     <Museum ID="4">
-        <Name></Name>
-        <Established></Established>
-        <Location></Location>
-        <People></People>
-        <History></History>
-        <ArtWorks></ArtWorks>
-        <Description></Description>
+        <Name>The British Museum</Name>
+        <Established>1753</Established>
+        <Location>Great Russell St, Bloomsbury, London WC1B 3DG, UK</Location>
+        <People>Founder: Sir Hans Sloane</People>
+        <History>Although today principally a museum of cultural art objects and antiquities, the British Museum was founded as a 'universal museum'. Its foundations lie in the will of the Irish-born British physician and naturalist Sir Hans Sloane (1660–1753).</History>
+        <ArtWorks>Rosetta Stone, Study for Adam, Rosetta Stone</ArtWorks>
+        <Description>Its permanent collection numbers some 8 million works, and is among the largest and most comprehensive in existence</Description>
     </Museum>
     <Museum ID="5">
-        <Name></Name>
-        <Established></Established>
-        <Location></Location>
-        <People></People>
-        <History></History>
-        <ArtWorks></ArtWorks>
-        <Description></Description>
+        <Name>The Prado</Name>
+        <Established>1819</Established>
+        <Location>Paseo del Prado, s/n, 28014 Madrid, Spain</Location>
+        <People>Architects: Rafael Moneo, Juan de Villanueva</People>
+        <History>The building that today houses the Museo Nacional del Prado was designed by architect Juan de Villanueva in 1785. It was constructed to house the Natural History Cabinet, by orders of King Charles III.</History>
+        <ArtWorks>The Third of May 1808, Ka maja desnuda, Las Hilanderas</ArtWorks>
+        <Description>The Prado Museum is the main Spanish national art museum, located in central Madrid.</Description>
     </Museum>
 </Museums>

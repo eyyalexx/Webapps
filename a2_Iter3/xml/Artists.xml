@@ -22,29 +22,29 @@
     <Artist ID="3">
         <Name>Claude Monet</Name>
         <Description>Oscar-Claude Monet was a founder of French Impressionist painting, and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein-air landscape painting.</Description>
-        <Birth></Birth>
-        <Death></Death>
-        <Living></Living>
-        <Genres></Genres>
-        <Famous></Famous>
+        <Birth>14 November 1840</Birth>
+        <Death>5 December 1926</Death>
+        <Living>France</Living>
+        <Genres>Impressionism</Genres>
+        <Famous>Rouen Cathedral series</Famous>
     </Artist>
     <Artist ID="4">
-        <Name></Name>
-        <Description></Description>
-        <Birth></Birth>
-        <Death></Death>
-        <Living></Living>
-        <Genres></Genres>
-        <Famous></Famous>
+        <Name>Leonardo da Vinci</Name>
+        <Description>Leonardo di ser Piero da Vinci more commonly Leonardo da Vinci or simply Leonardo, was an Italian Renaissance polymath</Description>
+        <Birth>15 April 1452</Birth>
+        <Death>2 May 1519</Death>
+        <Living>Italy</Living>
+        <Genres>High Renaissance</Genres>
+        <Famous>The Last Judgment</Famous>
     </Artist>
     <Artist ID="5">
-        <Name></Name>
-        <Description></Description>
-        <Birth></Birth>
-        <Death></Death>
-        <Living></Living>
-        <Genres></Genres>
-        <Famous></Famous>
+        <Name>Michelangelo</Name>
+        <Description>Michelangelo di Lodovico Buonarroti Simoni or more commonly known by his first name Michelangelo was an Italian sculptor, painter, architect and poet of the High Renaissance.</Description>
+        <Birth>6 March 1475</Birth>
+        <Death>18 February 1564</Death>
+        <Living>Italy</Living>
+        <Genres>High Renaissance</Genres>
+        <Famous>The Last Judgment</Famous>
     </Artist>
 </Artists>
 
