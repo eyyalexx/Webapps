@@ -237,25 +237,52 @@ $(document).ready(function () {
         console.log(museumInfo);
     });
 
+    $("#cart").on('click', function(event){
+        var artworkVal = $("#artwork").val()-1;
+
+        $("#quantity").val(1);
+        $("#shipping").val(1);
+
+        if(artworkVal != null){
+            //for default values
+            var price = artworkInfo[artworkVal].Price;
+            var tax = parseInt(price) * 0.13;
+            var shipping = 10;
+            var total = parseInt(price)+tax+shipping;
+
+            $("#dialog").dialog("open");
+            $("#ptitle").text(artworkInfo[artworkVal].Name);
+            $("#price").text("$"+price);
+            $("#tax").text("$"+tax);
+            $("#shipPrice").text("$"+shipping);
+            $("#total").text("$"+total);
+
+        }else{
+            $("#dialog2").dialog("open");
+        }
+    });
+
     function updatePrice(){
-        var artworkVal = $("#artwork").val();
+        var artworkVal = $("#artwork").val()-1;
         if(artworkVal != null){
 
             var shippingMethod = $("#shipping").val();
             var quantity = $("#quantity").val();
             
-            var price = artInfo[artworkVal].price*quantity;
-            var tax = price * 0.13;
+            var price = artworkInfo[artworkVal].Price*quantity;
+            var tax = parseInt(price) * 0.13;
             if(shippingMethod == 1)
                 var shipping = 10;
             else{
                 var shipping = 20;
             }
 
+            var total = parseInt(price)+tax+shipping;
+
             $("#price").text("$"+price);
             $("#tax").text("$"+tax);
             $("#shipPrice").text("$"+shipping);
-            $("#total").text("$"+(price+tax+shipping));
+            $("#total").text("$"+total);
         }
     }
 
@@ -305,26 +332,7 @@ $(document).ready(function () {
     });
     
 
-    $("#cart").on('click', function(event){
-        var artworkVal = $("#artwork").val();
-
-        if(artworkVal != null){
-            //for default values
-            var price = artInfo[artworkVal].price;
-            var tax = price * 0.13;
-            var shipping = 10;
-
-            $("#dialog").dialog("open");
-            $("#ptitle").text(artInfo[artworkVal].name);
-            $("#price").text("$"+price);
-            $("#tax").text("$"+tax);
-            $("#shipPrice").text("$"+shipping);
-            $("#total").text("$"+(price+tax+shipping));
-
-        }else{
-            $("#dialog2").dialog("open");
-        }
-    });
+    
 
 });
 
