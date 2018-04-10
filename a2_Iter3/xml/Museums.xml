@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Museums>
+    <Museum ID="1">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="2">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="3">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="4">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+    <Museum ID="5">
+        <Name></Name>
+        <Established></Established>
+        <Location></Location>
+        <People></People>
+        <History></History>
+        <ArtWorks></ArtWorks>
+        <Description></Description>
+    </Museum>
+</Museums>

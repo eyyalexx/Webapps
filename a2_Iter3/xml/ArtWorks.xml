@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ArtWorks>
+    <ArtWork ID="1">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="2">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="3">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="4">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+        <ArtWork ID="5">
+        <Name></Name>
+        <Description></Description>
+        <Type></Type>
+        <Dimensions></Dimensions>
+        <Location></Location>
+        <Artist></Artist>
+        <Price></Price>
+        <Genre></Genre>
+        <DateCreated></DateCreated>
+    </ArtWork>
+</ArtWorks>

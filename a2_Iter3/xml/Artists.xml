@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Artists>
+    <Artist ID="1">
+        <Name>Vincent Van Gogh</Name>
+        <Description>Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art.</Description>
+        <Birth>30 March 1853</Birth>
+        <Death>29 July 1890</Death>
+        <Living>France</Living>
+        <Genres>Post-Impressionism</Genres>
+        <Famous>Sunflowers (F.458), repetition of the 4th version (yellow background)</Famous>
+    </Artist>
+    <Artist ID="2">
+        <Name>Pablo Picasso</Name>
+        <Description>Pablo Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France</Description>
+        <Birth>25 October 1881</Birth>
+        <Death>8 April 1973</Death>
+        <Living>France</Living>
+        <Genres>Cubism, Surrealism</Genres>
+        <Famous>La Vie (1903)</Famous>
+    </Artist>
+    <Artist ID="3">
+        <Name>Claude Monet</Name>
+        <Description>Oscar-Claude Monet was a founder of French Impressionist painting, and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein-air landscape painting.</Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+    <Artist ID="4">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+    <Artist ID="5">
+        <Name></Name>
+        <Description></Description>
+        <Birth></Birth>
+        <Death></Death>
+        <Living></Living>
+        <Genres></Genres>
+        <Famous></Famous>
+    </Artist>
+</Artists>
+
+
+
